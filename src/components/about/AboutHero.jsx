@@ -38,7 +38,6 @@ const AboutHero = ({ name, title, photo, bio, bioExtended, location }) => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            
             </div>
           </motion.div>
         </div>
