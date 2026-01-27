@@ -21,7 +21,7 @@ const ProjectDetails = () => {
           description="The project you're looking for doesn't exist."
           url={`/project/${slug}`}
         />
-        <main className="pt-32 pb-20">
+        <main className="pt-32 sm:pt-32 pb-20">
           <div className="container text-center">
             <h1 className="heading-lg mb-4">Project Not Found</h1>
             <p className="body-md mb-8">
@@ -65,7 +65,7 @@ const ProjectDetails = () => {
         structuredData={structuredData}
       />
       <main className="pb-20">
-        <div className="container pt-28">
+        <div className="container pt-32 sm:pt-32 md:pt-28">
           <motion.button
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}

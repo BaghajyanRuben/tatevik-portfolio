@@ -3,7 +3,7 @@ import { MapPin } from 'lucide-react';
 
 const AboutHero = ({ name, title, photo, bio, bioExtended, location }) => {
   return (
-    <section className="pt-32 pb-16">
+    <section className="pt-32 sm:pt-32 pb-12 sm:pb-16">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
@@ -13,14 +13,14 @@ const AboutHero = ({ name, title, photo, bio, bioExtended, location }) => {
             className="order-2 lg:order-1"
           >
             <h1 className="heading-xl mb-4">{name}</h1>
-            <p className="text-xl text-accent font-medium mb-2">{title}</p>
+            <p className="text-lg sm:text-xl text-accent font-medium mb-2">{title}</p>
             {location && (
-              <p className="flex items-center gap-1 text-muted mb-6">
+              <p className="flex items-center gap-1 text-muted mb-4 sm:mb-6">
                 <MapPin size={16} />
                 <span>{location}</span>
               </p>
             )}
-            <p className="body-lg mb-6">{bio}</p>
+            <p className="body-lg mb-4 sm:mb-6">{bio}</p>
             <p className="body-md">{bioExtended}</p>
           </motion.div>
 

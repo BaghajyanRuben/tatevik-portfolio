@@ -35,7 +35,7 @@ const Home = () => {
         keywords="UI/UX Portfolio, Design Projects, Mobile App Design, Web Design, Icon Design, Case Studies, Product Design"
         structuredData={structuredData}
       />
-      <main className="pt-32 pb-20">
+      <main className="pt-32 sm:pt-32 pb-20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ const Home = () => {
             transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
             className="mb-16"
           >
-            <h1 className="mb-6 font-sans font-medium text-[80px] leading-[1.1]">
+            <h1 className="mb-6 font-sans font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.1]">
               Discover the works of Tatevik Petrosyan.{' '}
               <span className="text-[#ababab]">
                 Let’s shape your brand into a masterpiece together.

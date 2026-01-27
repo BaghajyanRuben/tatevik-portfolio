@@ -35,7 +35,7 @@ const SocialLinks = ({ social }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="flex items-center justify-center gap-4"
+      className="flex flex-wrap items-center justify-center gap-3 sm:gap-4"
     >
       {links.map((link, index) => (
         <motion.a

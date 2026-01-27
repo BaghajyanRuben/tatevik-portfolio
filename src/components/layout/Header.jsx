@@ -1,7 +1,6 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '../ui';
-import arrow45 from '../../assets/arrow-45.svg';
 
 const Header = () => {
   const location = useLocation();
@@ -21,15 +20,24 @@ const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-secondary/80 backdrop-blur-md"
     >
       <div className="container">
-        <nav className="relative flex items-center h-20">
-          <Link
-            to="/"
-            className="text-xl font-display font-semibold text-primary hover:text-accent transition-smooth"
-          >
-            Tatevik Petrosyan
-          </Link>
+        <nav className="relative flex flex-col gap-4 py-4 md:py-0 md:flex-row md:items-center md:h-20">
+          <div className="flex items-center justify-around w-full gap-4 md:contents">
+            <Link
+              to="/"
+              className="text-lg sm:text-xl font-display font-semibold text-primary hover:text-accent transition-smooth"
+            >
+              Tatevik Petrosyan
+            </Link>
+            <Button
+              onClick={() => navigate('/projects')}
+              size="sm"
+              className="gap-2 sm:px-6 sm:py-3 sm:text-base md:ml-auto"
+            >
+              <span>Projects</span>
+            </Button>
+          </div>
 
-          <ul className="absolute left-1/2 -translate-x-1/2 flex items-center gap-8">
+          <ul className="w-full md:w-auto flex flex-wrap items-center justify-around sm:justify-center gap-4 sm:gap-6 md:absolute md:left-1/2 md:-translate-x-1/2 md:gap-8">
             {navLinks.map((link) => (
               <li key={link.path}>
                 <Link
@@ -52,12 +60,6 @@ const Header = () => {
               </li>
             ))}
           </ul>
-
-          <div className="ml-auto">
-            <Button onClick={() => navigate('/projects')} className="gap-2">
-              <span>Projects</span>
-            </Button>
-          </div>
         </nav>
       </div>
     </motion.header>

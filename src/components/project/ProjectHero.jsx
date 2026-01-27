@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const ProjectHero = ({ title, description, heroImage }) => {
   return (
-    <section className="pt-32 pb-16">
+    <section className="pt-32 sm:pt-32 pb-12 sm:pb-16">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

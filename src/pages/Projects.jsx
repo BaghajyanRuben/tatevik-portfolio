@@ -31,7 +31,7 @@ const Projects = () => {
         keywords="Projects, Case Studies, UI/UX Portfolio, Product Design"
         structuredData={structuredData}
       />
-      <main className="pt-32 pb-20">
+      <main className="pt-32 sm:pt-32 pb-20">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

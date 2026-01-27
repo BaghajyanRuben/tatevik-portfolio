@@ -18,7 +18,7 @@ const ProjectInfo = ({ info }) => {
       className="py-12 border-y border-primary/10"
     >
       <div className="container">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           {infoItems.map((item, index) => (
             <motion.div
               key={item.label}
