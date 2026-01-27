@@ -38,8 +38,7 @@ const AboutHero = ({ name, title, photo, bio, bioExtended, location }) => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/10 rounded-full -z-10" />
-              <div className="absolute -top-4 -left-4 w-16 h-16 bg-primary/5 rounded-full -z-10" />
+            
             </div>
           </motion.div>
         </div>
