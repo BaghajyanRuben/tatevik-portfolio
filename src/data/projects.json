@@ -1,0 +1,197 @@
+{
+  "projects": [
+    {
+      "id": "fintech-mobile-app",
+      "title": "FinTech Mobile App",
+      "subtitle": "Mobile App UI/UX",
+      "thumbnail": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+      "heroImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1600&h=900&fit=crop",
+      "description": "A comprehensive mobile banking application designed to simplify personal finance management with intuitive interfaces and seamless user experience.",
+      "info": {
+        "role": "Lead UI/UX Designer",
+        "tools": ["Figma", "Principle", "Maze"],
+        "type": "Mobile App",
+        "year": "2024"
+      },
+      "figmaUrl": "",
+      "sections": [
+        {
+          "type": "text",
+          "title": "The Challenge",
+          "content": "Traditional banking apps often overwhelm users with complex navigation and cluttered interfaces. Our goal was to create a mobile banking experience that feels as simple as sending a text message while maintaining all essential financial features."
+        },
+        {
+          "type": "text",
+          "title": "Research & Discovery",
+          "content": "We conducted extensive user research including 30+ interviews, competitive analysis of 15 banking apps, and usability testing sessions. Key insights revealed that users prioritize quick access to balance, easy transfers, and clear transaction history."
+        },
+        {
+          "type": "image",
+          "src": "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=1200&h=800&fit=crop",
+          "caption": "Initial wireframes exploring different navigation patterns"
+        },
+        {
+          "type": "text",
+          "title": "Design Process",
+          "content": "Starting with low-fidelity wireframes, we iterated through multiple concepts before arriving at a bottom navigation pattern with contextual actions. The design system was built with accessibility in mind, meeting WCAG 2.1 AA standards."
+        },
+        {
+          "type": "gallery",
+          "images": [
+            "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?w=600&h=600&fit=crop"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Outcome",
+          "content": "The redesigned app achieved a 40% increase in daily active users and a 4.8 App Store rating. User task completion time decreased by 35%, and customer support tickets related to navigation dropped by 50%."
+        }
+      ]
+    },
+    {
+      "id": "icon-design-system",
+      "title": "Enterprise Icon System",
+      "subtitle": "Icon Design / Design System",
+      "thumbnail": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop",
+      "heroImage": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1600&h=900&fit=crop",
+      "description": "A comprehensive icon library of 500+ custom icons designed for a SaaS platform, ensuring visual consistency and scalability across all touchpoints.",
+      "info": {
+        "role": "Icon Designer",
+        "tools": ["Illustrator", "Figma", "SVG"],
+        "type": "Icon System",
+        "year": "2024"
+      },
+      "figmaUrl": "",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Project Overview",
+          "content": "The client needed a unified icon system to replace their inconsistent mix of different icon libraries. The new system needed to work across web, mobile, and marketing materials while maintaining a distinct brand identity."
+        },
+        {
+          "type": "text",
+          "title": "Design Principles",
+          "content": "We established core principles: geometric construction on a 24px grid, 2px stroke weight for consistency, rounded caps and joins for friendliness, and optical adjustments for visual balance at small sizes."
+        },
+        {
+          "type": "image",
+          "src": "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=1200&h=800&fit=crop",
+          "caption": "Icon grid system and construction guidelines"
+        },
+        {
+          "type": "gallery",
+          "images": [
+            "https://images.unsplash.com/photo-1618761714954-0b8cd0026356?w=600&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1572044162444-ad60f128bdea?w=600&h=600&fit=crop"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Delivery & Implementation",
+          "content": "The final library includes 500+ icons in multiple formats (SVG, PNG, icon font) with detailed documentation. The Figma component library enables designers to easily swap and customize icons while maintaining consistency."
+        }
+      ]
+    },
+    {
+      "id": "ecommerce-redesign",
+      "title": "E-Commerce Redesign",
+      "subtitle": "Website UI/UX",
+      "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "heroImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&h=900&fit=crop",
+      "description": "Complete redesign of a fashion e-commerce platform focusing on improving conversion rates and creating an immersive shopping experience.",
+      "info": {
+        "role": "UI/UX Designer",
+        "tools": ["Figma", "Hotjar", "Google Analytics"],
+        "type": "Website",
+        "year": "2023"
+      },
+      "figmaUrl": "",
+      "sections": [
+        {
+          "type": "text",
+          "title": "Background",
+          "content": "The existing e-commerce site had high traffic but poor conversion rates. Analytics revealed users were dropping off at product pages and checkout. Our mission was to identify pain points and redesign the experience."
+        },
+        {
+          "type": "text",
+          "title": "User Research",
+          "content": "Heatmaps and session recordings showed users struggling with product filtering, image zoom, and size selection. We conducted A/B tests on key flows and gathered qualitative feedback through surveys."
+        },
+        {
+          "type": "image",
+          "src": "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=1200&h=800&fit=crop",
+          "caption": "Optimized user flow from discovery to purchase"
+        },
+        {
+          "type": "text",
+          "title": "Key Improvements",
+          "content": "We introduced a sticky add-to-cart bar, improved product imagery with 360° views, simplified the checkout to 3 steps, and added personalized recommendations. The mobile experience was completely reimagined for thumb-friendly navigation."
+        },
+        {
+          "type": "gallery",
+          "images": [
+            "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&h=600&fit=crop"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Results",
+          "content": "Post-launch metrics showed a 28% increase in conversion rate, 45% reduction in cart abandonment, and 60% improvement in mobile engagement. Average order value increased by 15% through better cross-selling."
+        }
+      ]
+    },
+    {
+      "id": "dashboard-analytics",
+      "title": "Analytics Dashboard",
+      "subtitle": "Web App UI/UX",
+      "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "heroImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&h=900&fit=crop",
+      "description": "Data visualization dashboard for a marketing analytics platform, transforming complex data into actionable insights through intuitive interfaces.",
+      "info": {
+        "role": "Product Designer",
+        "tools": ["Figma", "D3.js concepts", "Miro"],
+        "type": "Web Application",
+        "year": "2023"
+      },
+      "figmaUrl": "",
+      "sections": [
+        {
+          "type": "text",
+          "title": "The Problem",
+          "content": "Marketing teams were drowning in data spread across multiple tools. They needed a unified dashboard that could surface insights without requiring data analysis expertise."
+        },
+        {
+          "type": "text",
+          "title": "Information Architecture",
+          "content": "We mapped out all data sources and user needs to create a hierarchy of information. Primary KPIs are visible at a glance, with progressive disclosure for detailed breakdowns."
+        },
+        {
+          "type": "image",
+          "src": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=800&fit=crop",
+          "caption": "Information architecture and component hierarchy"
+        },
+        {
+          "type": "text",
+          "title": "Visual Design",
+          "content": "The interface uses a dark theme optimized for data visualization, with a carefully crafted color palette that ensures accessibility and clear data differentiation. Custom chart components were designed for consistency."
+        },
+        {
+          "type": "gallery",
+          "images": [
+            "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&h=600&fit=crop",
+            "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=600&h=600&fit=crop"
+          ]
+        },
+        {
+          "type": "text",
+          "title": "Impact",
+          "content": "Users reported 50% time savings in their weekly reporting workflows. The dashboard became the primary tool for executive presentations, replacing manual PowerPoint creation."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+# robots.txt for Tatevik Petrosyan Portfolio
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tatevikpetrosyan.com/sitemap.xml
+
+# Disallow admin or private paths (if any)
+Disallow: /api/
+Disallow: /admin/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

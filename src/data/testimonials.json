@@ -1,0 +1,28 @@
+{
+  "testimonials": [
+    {
+      "clientName": "Anna Petrova",
+      "projectTitle": "FinTech Mobile App",
+      "rating": 5,
+      "startDate": "Jan 2024",
+      "endDate": "May 2024",
+      "feedback": "Tatevik translated complex product requirements into a clean, user-friendly experience. The UI is elegant, and the UX decisions were backed by solid research."
+    },
+    {
+      "clientName": "David Kim",
+      "projectTitle": "Enterprise Icon System",
+      "rating": 5,
+      "startDate": "Mar 2024",
+      "endDate": "Jun 2024",
+      "feedback": "The icon system Tatevik delivered was beautifully crafted and incredibly consistent. It elevated our brand instantly and scaled perfectly across platforms."
+    },
+    {
+      "clientName": "Maria Rossi",
+      "projectTitle": "E-Commerce Redesign",
+      "rating": 5,
+      "startDate": "Aug 2023",
+      "endDate": "Nov 2023",
+      "feedback": "Our e-commerce redesign exceeded expectations. Conversions improved, and the new visual language feels premium and cohesive."
+    }
+  ]
+}

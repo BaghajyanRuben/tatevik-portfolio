@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #0A0A0A;
+  --color-secondary: #FAFAFA;
+  --color-accent: #6366F1;
+  --color-muted: #71717A;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Playfair Display', serif;
+
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-secondary text-primary font-sans antialiased;
+    margin: 0;
+    min-height: 100vh;
+  }
+
+  ::selection {
+    @apply bg-accent text-white;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .heading-xl {
+    @apply text-4xl md:text-5xl lg:text-6xl font-display font-semibold tracking-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-display font-semibold tracking-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-display font-medium;
+  }
+
+  .body-lg {
+    @apply text-lg md:text-xl text-muted leading-relaxed;
+  }
+
+  .body-md {
+    @apply text-base text-muted leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-smooth;
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "name": "Tatevik Petrosyan",
+  "title": "Freelance Product / UI/UX / Icon Designer",
+  "location": "Yerevan, Armenia",
+  "photo": "/images/about/profile.jpg",
+  "bio": "I'm a versatile designer with over 10 years of experience spanning UI/UX design, icon design, and interior design. Trained at the Florence Design Academy in Italy and the Academy of Fine Arts in Armenia, I bring a unique blend of European design sensibility and creative expertise to every project.",
+  "bioExtended": "My journey from interior design to digital product design has given me a deep understanding of space, user flow, and visual harmony. I specialize in creating intuitive interfaces, custom icon systems, and cohesive design solutions. Whether it's a mobile app, web platform, or comprehensive design system, I focus on crafting experiences that are both beautiful and functional.",
+  "skills": [
+    "UI/UX Design",
+    "Icon Design",
+    "Figma",
+    "Adobe Illustrator",
+    "Adobe XD",
+    "Adobe Photoshop",
+    "Sketch",
+    "Interior Design",
+    "Prototyping"
+  ],
+  "experience": [
+    {
+      "title": "Freelance UX/UI Designer",
+      "company": "Upwork",
+      "period": "2019 - Present"
+    },
+    {
+      "title": "R&D Technician Senior",
+      "company": "Synopsys Armenia",
+      "period": "2017 - Present"
+    },
+    {
+      "title": "Freelance Interior Designer",
+      "company": "Self-employed",
+      "period": "2015 - 2020"
+    },
+    {
+      "title": "UI & Icon Designer",
+      "company": "Synopsys Armenia",
+      "period": "2015 - 2017"
+    },
+    {
+      "title": "Interior Designer",
+      "company": "Style Studio",
+      "period": "2014 - 2015"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Design",
+      "school": "Florence Design Academy",
+      "location": "Florence, Italy",
+      "period": "2011 - 2013"
+    },
+    {
+      "degree": "Design",
+      "school": "Academy of Fine Arts",
+      "location": "Yerevan, Armenia",
+      "period": "2009 - 2011"
+    },
+    {
+      "degree": "Foreign Languages",
+      "school": "Language University",
+      "location": "Yerevan, Armenia",
+      "period": "2007 - 2009"
+    }
+  ],
+  "certifications": [
+    "Microsoft Innovation Center - UX/UI Design Course",
+    "Coursera - UX/UI Design Course"
+  ],
+  "languages": [
+    { "language": "Armenian", "level": "Native" },
+    { "language": "English", "level": "Advanced" },
+    { "language": "Italian", "level": "Intermediate" },
+    { "language": "Russian", "level": "Intermediate" }
+  ],
+  "social": {
+    "behance": "https://www.behance.net/tatevikpetrosy1",
+    "upwork": "https://www.upwork.com/freelancers/~01a1574dd63d64d5ae",
+    "linkedin": "https://www.linkedin.com/in/tatevik-petrosyan-827722ba/",
+    "email": "vetatpetrosyan@gmail.com"
+  }
+}
