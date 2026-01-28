@@ -8,7 +8,7 @@ const ProjectGrid = ({ projects }) => {
       variants={staggerContainer}
       initial="hidden"
       animate="visible"
-      className="section-grid-3"
+      className="section-grid"
     >
       {projects.map((project) => (
         <motion.div key={project.id} variants={staggerItem}>
