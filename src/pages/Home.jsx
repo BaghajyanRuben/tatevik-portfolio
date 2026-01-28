@@ -3,7 +3,6 @@ import { HomeHero, SelectedWork } from '../components/sections/home';
 import SEO from '../components/SEO';
 import projectsData from '../data/projects.json';
 import aboutData from '../data/about.json';
-import arrow45 from '../assets/arrow-45.svg';
 
 const Home = () => {
   // Structured data for the portfolio/collection page
@@ -35,7 +34,7 @@ const Home = () => {
       />
       <main className="page-main page-main-top">
         <div className="container">
-          <HomeHero ctaUrl={aboutData.social?.upwork} ctaIcon={arrow45} />
+          <HomeHero ctaUrl={aboutData.social?.upwork} />
           <SelectedWork projects={projectsData.projects} />
         </div>
       </main>

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { Button } from '../../ui';
+import { WorkWithMeButton } from '../../ui';
 
-const HomeHero = ({ ctaUrl, ctaIcon }) => {
+const HomeHero = ({ ctaUrl }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -17,17 +17,7 @@ const HomeHero = ({ ctaUrl, ctaIcon }) => {
       </h1>
       {ctaUrl && (
         <div className="mt-8">
-          <Button
-            href={ctaUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="gap-2"
-          >
-            <span>Work with me</span>
-            {ctaIcon && (
-              <img src={ctaIcon} alt="" className="h-4 w-4" aria-hidden="true" />
-            )}
-          </Button>
+          <WorkWithMeButton href={ctaUrl} tone="dark" />
         </div>
       )}
     </motion.div>
