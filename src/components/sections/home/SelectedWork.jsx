@@ -1,8 +1,12 @@
 import { ProjectGrid } from '../../home';
+import DesigningSuccess from './DesigningSuccess';
 
 const SelectedWork = ({ projects }) => {
   return (
-    <ProjectGrid projects={projects} />
+    <div className="flex flex-col gap-16">
+      <ProjectGrid projects={projects} />
+      <DesigningSuccess />
+    </div>
   );
 };
 
