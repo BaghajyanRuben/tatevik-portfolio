@@ -35,6 +35,33 @@ portfolio/
 │
 ├── src/
 │   ├── components/
+│   │   ├── sections/
+│   │   │   ├── about/
+│   │   │   │   ├── SkillsSection.jsx
+│   │   │   │   ├── ExperienceSection.jsx
+│   │   │   │   ├── EducationSection.jsx
+│   │   │   │   ├── CredentialsSection.jsx
+│   │   │   │   ├── ContactSection.jsx
+│   │   │   │   └── index.js
+│   │   │   ├── home/
+│   │   │   │   ├── HomeHero.jsx
+│   │   │   │   ├── SelectedWork.jsx
+│   │   │   │   └── index.js
+│   │   │   ├── project/
+│   │   │   │   ├── ProjectBackLink.jsx
+│   │   │   │   ├── ProjectContent.jsx
+│   │   │   │   ├── ProjectPrototypeSection.jsx
+│   │   │   │   ├── ProjectNextSection.jsx
+│   │   │   │   └── index.js
+│   │   │   ├── projects/
+│   │   │   │   ├── ProjectsIntro.jsx
+│   │   │   │   ├── ProjectsList.jsx
+│   │   │   │   └── index.js
+│   │   │   ├── testimonials/
+│   │   │   │   ├── TestimonialsIntro.jsx
+│   │   │   │   ├── TestimonialsGrid.jsx
+│   │   │   │   └── index.js
+│   │   │   └── index.js
 │   │   ├── layout/
 │   │   │   ├── Header.jsx           # Navigation header
 │   │   │   ├── Footer.jsx           # Site footer
@@ -67,6 +94,8 @@ portfolio/
 │   ├── pages/
 │   │   ├── Home.jsx                  # Portfolio landing page
 │   │   ├── ProjectDetails.jsx        # Dynamic project page
+│   │   ├── Projects.jsx              # Projects listing
+│   │   ├── Testimonials.jsx          # Testimonials page
 │   │   └── About.jsx                 # About/bio page
 │   │
 │   ├── data/
@@ -88,6 +117,14 @@ portfolio/
 ```
 
 ---
+
+## Architecture & Styling
+
+- **Pages** are responsible for data wiring and composition.
+- **Sections** are page-specific building blocks (`src/components/sections`) and contain layout + animation for each page chunk.
+- **UI components** are reusable primitives in `src/components/ui`.
+- **Layout components** provide app-level scaffolding and transitions.
+- **Styles are separated** by defining semantic class names in `src/index.css` using `@apply`, then reusing those class names in components for cleaner JSX.
 
 ## Features
 

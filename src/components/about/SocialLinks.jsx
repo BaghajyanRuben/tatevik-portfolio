@@ -43,7 +43,7 @@ const SocialLinks = ({ social }) => {
           href={link.href}
           target={link.label !== 'Email' ? '_blank' : undefined}
           rel={link.label !== 'Email' ? 'noopener noreferrer' : undefined}
-          className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-muted hover:bg-accent hover:text-white transition-smooth"
+          className="icon-button"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, y: 10 }}

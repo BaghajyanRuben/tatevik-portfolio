@@ -1,11 +1,15 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { ArrowLeft } from 'lucide-react';
 import { PageTransition } from '../components/layout';
-import { ProjectHero, ProjectInfo, ContentBlock } from '../components/project';
+import { ProjectHero, ProjectInfo } from '../components/project';
 import { Button } from '../components/ui';
 import SEO from '../components/SEO';
 import projectsData from '../data/projects.json';
+import {
+  ProjectBackLink,
+  ProjectContent,
+  ProjectPrototypeSection,
+  ProjectNextSection,
+} from '../components/sections/project';
 
 const ProjectDetails = () => {
   const { slug } = useParams();
@@ -21,7 +25,7 @@ const ProjectDetails = () => {
           description="The project you're looking for doesn't exist."
           url={`/project/${slug}`}
         />
-        <main className="pt-32 sm:pt-32 pb-20">
+        <main className="page-main page-main-top">
           <div className="container text-center">
             <h1 className="heading-lg mb-4">Project Not Found</h1>
             <p className="body-md mb-8">
@@ -64,20 +68,8 @@ const ProjectDetails = () => {
         keywords={`${project.title}, ${project.subtitle}, ${project.info.tools.join(', ')}, ${project.info.type}, Case Study`}
         structuredData={structuredData}
       />
-      <main className="pb-20">
-        <div className="container pt-32 sm:pt-32 md:pt-28">
-          <motion.button
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.4 }}
-            onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-2 text-muted hover:text-primary transition-smooth mb-8"
-            aria-label="Go back to previous page"
-          >
-            <ArrowLeft size={20} />
-            <span>Back</span>
-          </motion.button>
-        </div>
+      <main className="page-main">
+        <ProjectBackLink onBack={() => navigate(-1)} />
 
         <ProjectHero
           title={project.title}
@@ -87,48 +79,11 @@ const ProjectDetails = () => {
 
         <ProjectInfo info={project.info} />
 
-        <section className="py-16">
-          <div className="container space-y-16">
-            {project.sections.map((section, index) => (
-              <ContentBlock key={index} section={section} />
-            ))}
-          </div>
-        </section>
+        <ProjectContent sections={project.sections} />
 
-        {project.figmaUrl && (
-          <section className="py-16 bg-gray-50">
-            <div className="container">
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                className="heading-md mb-8"
-              >
-                Interactive Prototype
-              </motion.h2>
-              <ContentBlock
-                section={{ type: 'figma', url: project.figmaUrl, title: project.title }}
-              />
-            </div>
-          </section>
-        )}
+        <ProjectPrototypeSection figmaUrl={project.figmaUrl} title={project.title} />
 
-        <section className="py-16">
-          <div className="container text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <p className="text-muted mb-4">Next Project</p>
-              <Button onClick={() => navigate('/')} variant="secondary">
-                View All Projects
-              </Button>
-            </motion.div>
-          </div>
-        </section>
+        <ProjectNextSection onNext={() => navigate('/')} />
       </main>
     </PageTransition>
   );

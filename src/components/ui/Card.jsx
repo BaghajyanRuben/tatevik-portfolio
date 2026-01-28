@@ -11,11 +11,11 @@ const Card = ({
   return (
     <Link to={href}>
       <motion.article
-        className={`group relative overflow-hidden rounded-2xl bg-white cursor-pointer ${className}`}
+        className={`card group ${className}`}
         whileHover={{ y: -8 }}
         transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
       >
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="card-media">
           <motion.img
             src={image}
             alt={title}
@@ -24,7 +24,7 @@ const Card = ({
             transition={{ duration: 0.4, ease: [0.4, 0, 0.2, 1] }}
           />
           <motion.div
-            className="absolute inset-0 bg-primary/60 flex items-end p-6"
+            className="card-overlay"
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 1 }}
             transition={{ duration: 0.3 }}
@@ -38,11 +38,11 @@ const Card = ({
           </motion.div>
         </div>
 
-        <div className="p-5">
-          <h3 className="text-lg font-display font-semibold text-primary group-hover:text-accent transition-smooth">
+        <div className="card-body">
+          <h3 className="card-title">
             {title}
           </h3>
-          <p className="text-muted text-sm mt-1">{subtitle}</p>
+          <p className="card-subtitle">{subtitle}</p>
         </div>
       </motion.article>
     </Link>

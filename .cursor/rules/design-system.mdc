@@ -1,0 +1,12 @@
+---
+description: "Enforce professional UI/UX, Tailwind CSS, and shadcn/ui patterns"
+globs: "**/*.{tsx,jsx,css}"
+alwaysApply: true
+---
+# Web Design Standards
+- **Framework**: Use React with Next.js (App Router) standards.
+- **Styling**: Use Tailwind CSS utility classes exclusively.
+- **Components**: Use shadcn/ui components located in `@/components/ui`.
+- **Interactivity**: Use Framer Motion for smooth transitions and animations.
+- **Icons**: Use Lucide React for consistent iconography.
+- **UX**: Always include skeleton loaders for data fetching and focus states for accessibility.
