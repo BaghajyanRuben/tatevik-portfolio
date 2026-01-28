@@ -124,7 +124,7 @@
   }
 
   .card {
-    @apply relative overflow-hidden rounded-2xl bg-white cursor-pointer;
+    @apply relative overflow-hidden rounded-[50px] bg-white cursor-pointer;
   }
 
   .card-media {
@@ -132,11 +132,11 @@
   }
 
   .card-overlay {
-    @apply absolute inset-x-0 bottom-0 h-full bg-primary/60 flex items-end p-6 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)];
+    @apply absolute inset-x-0 bottom-0 min-h-full bg-primary/60 flex items-end p-[50px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)];
   }
 
   .card:hover .card-overlay {
-    height: 7rem;
+    min-height: 0;
   }
 
   .info-card {
