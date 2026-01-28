@@ -79,7 +79,7 @@ const ProjectDetails = () => {
 
         <ProjectInfo info={project.info} />
 
-        <ProjectContent sections={project.sections} />
+        <ProjectContent sections={project.sections} projectTitle={project.title} />
 
         <ProjectPrototypeSection figmaUrl={project.figmaUrl} title={project.title} />
 

@@ -11,10 +11,10 @@ const SEO = ({
   structuredData,
 }) => {
   const siteUrl = 'https://tatevikpetrosyan.com'; // Update with your actual domain
-  const defaultTitle = 'Tatevik Petrosyan | UI/UX & Icon Designer Portfolio';
-  const defaultDescription = 'UI/UX Designer & Icon Designer specializing in creating intuitive, beautiful interfaces and comprehensive design systems. View my portfolio of mobile apps, web designs, and icon systems.';
-  const defaultImage = `${siteUrl}/og-image.jpg`;
-  const defaultKeywords = 'UI/UX Designer, Icon Designer, Product Designer, Portfolio, Design Systems, Mobile App Design, Web Design, Figma, User Experience, User Interface, Tatevik Petrosyan';
+  const defaultTitle = 'Tatevik Petrosyan | UI/UX, Icon & Logo Designer';
+  const defaultDescription = 'Portfolio of Tatevik Petrosyan, a specialist in UI/UX design, custom iconography, and brand identity. Creating intuitive digital experiences and scalable design systems.';
+  const defaultImage = `${siteUrl}/images/about/profile.jpg`;
+  const defaultKeywords = 'UI/UX Designer, Icon Design, Logo Designer, Product Design, Web Design Portfolio, Custom Icons, Design Systems';
 
   const seo = {
     title: title ? `${title} | Tatevik Petrosyan` : defaultTitle,

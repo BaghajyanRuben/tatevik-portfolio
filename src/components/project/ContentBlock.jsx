@@ -19,8 +19,9 @@ const TextBlock = ({ title, content }) => {
   );
 };
 
-const ImageBlock = ({ src, caption }) => {
+const ImageBlock = ({ src, caption, projectTitle }) => {
   const { ref, isInView } = useScrollAnimation();
+  const altText = caption || (projectTitle ? `${projectTitle} design detail` : '');
 
   return (
     <motion.figure
@@ -32,7 +33,7 @@ const ImageBlock = ({ src, caption }) => {
     >
       <img
         src={src}
-        alt={caption || ''}
+        alt={altText}
         className="w-full h-auto"
       />
       {caption && (
@@ -44,7 +45,7 @@ const ImageBlock = ({ src, caption }) => {
   );
 };
 
-const GalleryBlock = ({ images }) => {
+const GalleryBlock = ({ images, projectTitle }) => {
   const { ref, isInView } = useScrollAnimation();
 
   return (
@@ -65,7 +66,7 @@ const GalleryBlock = ({ images }) => {
         >
           <img
             src={image}
-            alt=""
+            alt={projectTitle ? `${projectTitle} gallery image ${index + 1}` : `Project gallery image ${index + 1}`}
             className="w-full h-full object-cover aspect-square"
           />
         </motion.div>
@@ -89,16 +90,22 @@ const FigmaBlock = ({ url, title }) => {
   );
 };
 
-const ContentBlock = ({ section }) => {
+const ContentBlock = ({ section, projectTitle }) => {
   const { type } = section;
 
   switch (type) {
     case 'text':
       return <TextBlock title={section.title} content={section.content} />;
     case 'image':
-      return <ImageBlock src={section.src} caption={section.caption} />;
+      return (
+        <ImageBlock
+          src={section.src}
+          caption={section.caption}
+          projectTitle={projectTitle}
+        />
+      );
     case 'gallery':
-      return <GalleryBlock images={section.images} />;
+      return <GalleryBlock images={section.images} projectTitle={projectTitle} />;
     case 'figma':
       return <FigmaBlock url={section.url} title={section.title} />;
     default:
