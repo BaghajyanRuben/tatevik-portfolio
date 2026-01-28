@@ -21,7 +21,7 @@ const Header = () => {
     >
       <div className="container">
         <nav className="relative flex flex-col gap-4 py-4 md:py-0 md:flex-row md:items-center md:h-20">
-          <div className="flex items-center justify-around w-full gap-4 md:contents">
+          <div className="flex items-center justify-between w-full gap-4 md:contents">
             <Link
               to="/"
               className="text-lg sm:text-xl font-display font-semibold text-primary hover:text-accent transition-smooth"
@@ -37,7 +37,7 @@ const Header = () => {
             </Button>
           </div>
 
-          <ul className="w-full md:w-auto flex flex-wrap items-center justify-around sm:justify-center gap-4 sm:gap-6 md:absolute md:left-1/2 md:-translate-x-1/2 md:gap-8">
+          <ul className="w-full md:w-auto flex flex-wrap items-center justify-start gap-4 sm:gap-6 md:absolute md:left-1/2 md:-translate-x-1/2 md:gap-8">
             {navLinks.map((link) => (
               <li key={link.path}>
                 <Link

@@ -1,39 +1,55 @@
 import { PageTransition } from '../components/layout';
-import { ProjectsIntro, ProjectsList } from '../components/sections/projects';
 import SEO from '../components/SEO';
+import { ProductCategory } from '../components/sections/projects';
 import projectsData from '../data/projects.json';
 
 const Projects = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Projects",
-    "description": "All design projects and case studies",
-    "url": "https://tatevikpetrosyan.com/projects",
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": projectsData.projects.map((project, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "name": project.title,
-        "url": `https://tatevikpetrosyan.com/project/${project.id}`
-      }))
-    }
-  };
+  const sections = [
+    {
+      id: 'ui-ux',
+      titleDarkLines: ['UX / UI Design', 'Products'],
+      titleLight: 'Designing Seamless Digital Experiences',
+      mode: 'left',
+      imageSrc: projectsData.projects[0]?.thumbnail,
+    },
+    {
+      id: 'logo',
+      titleDarkLines: ['logo'],
+      titleLight: 'Transforming ideas into timeless brand symbols.',
+      mode: 'right',
+      imageSrc: projectsData.projects[1]?.thumbnail,
+    },
+    {
+      id: 'icons',
+      titleDarkLines: ['Icons'],
+      titleLight: 'that simplify interfaces and guide users.',
+      mode: 'left',
+      imageSrc: projectsData.projects[2]?.thumbnail,
+    },
+  ];
 
   return (
     <PageTransition>
       <SEO
         title="Projects"
-        description="Explore all projects and case studies."
+        description="Explore UI/UX, logo, and icon design work."
         url="/projects"
-        keywords="Projects, Case Studies, UI/UX Portfolio, Product Design"
-        structuredData={structuredData}
+        keywords="Projects, UI/UX, Logo Design, Icon Design, Portfolio"
       />
       <main className="page-main page-main-top">
         <div className="container">
-          <ProjectsIntro />
-          <ProjectsList projects={projectsData.projects} />
+          <div className="flex flex-col gap-8 md:gap-16">
+            {sections.map((section) => (
+              <ProductCategory
+                key={section.id}
+                titleDarkLines={section.titleDarkLines}
+                titleLight={section.titleLight}
+                mode={section.mode}
+                imageSrc={section.imageSrc}
+                imageAlt={`${section.titleDarkLines.join(' ')} preview`}
+              />
+            ))}
+          </div>
         </div>
       </main>
     </PageTransition>

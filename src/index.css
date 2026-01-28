@@ -29,6 +29,10 @@
     min-height: 100vh;
   }
 
+  #root {
+    @apply w-full;
+  }
+
   ::selection {
     @apply bg-accent text-white;
   }
@@ -36,7 +40,7 @@
 
 @layer components {
   .container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-[108px];
   }
 
   .page-main {
@@ -124,7 +128,7 @@
   }
 
   .card {
-    @apply relative overflow-hidden rounded-[50px] bg-white cursor-pointer;
+    @apply relative overflow-hidden rounded-[30px] bg-white cursor-pointer md:rounded-[50px];
   }
 
   .card-media {

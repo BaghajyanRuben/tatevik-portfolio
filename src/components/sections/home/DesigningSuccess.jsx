@@ -1,6 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { ArrowUpRight } from 'lucide-react';
-import { Button } from '../../ui';
+import { ActionButton } from '../../ui';
 
 
 const DesigningSuccess = () => {
@@ -30,13 +29,12 @@ const DesigningSuccess = () => {
         </span>
       </p>
 
-      <Button
+      <ActionButton
         onClick={() => navigate('/projects')}
-        className="w-fit gap-2 px-6 py-3 text-base font-normal leading-6 transition-smooth sm:px-8 sm:py-4 sm:text-[20px] bg-[#EAEAEA] text-black hover:bg-white"
-      >
-        <span>Explore</span>
-        <ArrowUpRight className="h-5 w-5" aria-hidden="true" />
-      </Button>
+        label="Explore"
+        tone="light"
+        className="sm:px-8 sm:py-4 sm:text-[20px]"
+      />
     </div>
   );
 };
