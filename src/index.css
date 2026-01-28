@@ -128,23 +128,15 @@
   }
 
   .card-media {
-    @apply relative aspect-[4/3] overflow-hidden;
+    @apply relative aspect-square overflow-hidden;
   }
 
   .card-overlay {
-    @apply absolute inset-0 bg-primary/60 flex items-end p-6;
+    @apply absolute inset-x-0 bottom-0 h-full bg-primary/60 flex items-end p-6 transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)];
   }
 
-  .card-body {
-    @apply p-5;
-  }
-
-  .card-title {
-    @apply text-lg font-display font-semibold text-primary group-hover:text-accent transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)];
-  }
-
-  .card-subtitle {
-    @apply text-muted text-sm mt-1;
+  .card:hover .card-overlay {
+    height: 7rem;
   }
 
   .info-card {
