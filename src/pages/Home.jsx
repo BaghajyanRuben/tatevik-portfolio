@@ -1,5 +1,6 @@
 import { PageTransition } from '../components/layout';
 import { HomeHero, SelectedWork } from '../components/sections/home';
+import ClientsSection from '../components/sections/home/ClientsSection';
 import SEO from '../components/SEO';
 import projectsData from '../data/projects.json';
 import aboutData from '../data/about.json';
@@ -36,6 +37,9 @@ const Home = () => {
         <div className="container">
           <HomeHero ctaUrl={aboutData.social?.upwork} />
           <SelectedWork projects={projectsData.projects} />
+          <div className="mt-16">
+            <ClientsSection />
+          </div>
         </div>
       </main>
     </PageTransition>
