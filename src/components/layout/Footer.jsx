@@ -1,7 +1,47 @@
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { useRef, useState, useEffect } from 'react';
 import { WorkWithMeButton } from '../ui';
 import aboutData from '../../data/about.json';
+
+const TypewriterText = ({ text, className }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { margin: '-50px' });
+  const [displayedText, setDisplayedText] = useState('');
+
+  useEffect(() => {
+    if (!isInView) {
+      // Reset when out of view
+      setDisplayedText('');
+      return;
+    }
+
+    let currentIndex = 0;
+    const typingSpeed = 50; // milliseconds per character
+
+    const typeInterval = setInterval(() => {
+      if (currentIndex < text.length) {
+        setDisplayedText(text.slice(0, currentIndex + 1));
+        currentIndex++;
+      } else {
+        clearInterval(typeInterval);
+      }
+    }, typingSpeed);
+
+    return () => clearInterval(typeInterval);
+  }, [isInView, text]);
+
+  return (
+    <p ref={ref} className={className}>
+      {displayedText}
+      <span
+        className={`ml-0.5 inline-block h-[1em] w-[2px] translate-y-[0.1em] bg-white/80 ${
+          isInView ? 'cursor-blink' : 'opacity-0'
+        }`}
+      />
+    </p>
+  );
+};
 
 const Footer = () => {
   const navLinks = [
@@ -46,9 +86,10 @@ const Footer = () => {
             </nav>
           </div>
 
-          <p className="font-mono text-sm text-white/80 sm:text-base md:text-lg lg:text-xl lg:text-center">
-            Designed by Tatevik. Built by AI. Zero drama.
-          </p>
+          <TypewriterText
+            text="Designed by Tatevik. Built by AI. Zero drama."
+            className="font-mono text-sm text-white/80 sm:text-base md:text-lg lg:text-xl lg:text-center"
+          />
         </div>
       </div>
     </motion.footer>
