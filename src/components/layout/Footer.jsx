@@ -46,7 +46,7 @@ const Footer = () => {
             </nav>
           </div>
 
-          <p className="text-sm text-white/80 sm:text-base md:text-lg lg:text-xl lg:text-center">
+          <p className="font-mono text-sm text-white/80 sm:text-base md:text-lg lg:text-xl lg:text-center">
             Designed by Tatevik. Built by AI. Zero drama.
           </p>
         </div>
