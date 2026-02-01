@@ -1,0 +1,26 @@
+[
+    {
+      "id": "ui-ux",
+      "titleDarkLines": ["UX / UI Design", "Products"],
+      "titleLight": "Designing Seamless Digital Experiences",
+      "mode": "left",
+      "imageSrc": "/images/sections/ux_ui_cover.png",
+      "imageAlt": "Cover image for the UI/UX section"
+    },
+    {
+      "id": "logo",
+      "titleDarkLines": ["Logo"],
+      "titleLight": "Transforming ideas into timeless brand symbols.",
+      "mode": "right",
+      "imageSrc": "/images/sections/logo_cover.png",
+      "imageAlt": "Cover image for the Logo section"
+    },
+    {
+      "id": "icons",
+      "titleDarkLines": ["Icons"],
+      "titleLight": "that simplify interfaces and guide users.",
+      "mode": "left",
+      "imageSrc": "/images/sections/icon_cover.png",
+      "imageAlt": "Cover image for the Icons section"
+    }
+]
