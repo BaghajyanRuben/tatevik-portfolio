@@ -17,7 +17,7 @@
     },
     {
       "id": "icons",
-      "titleDarkLines": ["Icons"],
+      "titleDarkLines": ["Icon"],
       "titleLight": "that simplify interfaces and guide users.",
       "mode": "left",
       "imageSrc": "/images/sections/icon_cover.png",
