@@ -101,7 +101,7 @@ const HomeHero = ({ ctaUrl }) => {
       transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
       className="section-intro-lg"
     >
-      <h1 className="mb-6 font-sans font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.1]">
+      <h1 className="mb-6 font-sans font-medium text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1]">
         <TypeWriter
           text={mainText}
           delay={INITIAL_DELAY}
