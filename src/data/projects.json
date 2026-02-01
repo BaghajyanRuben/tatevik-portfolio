@@ -1,10 +1,10 @@
 {
   "projects": [
     {
-      "id": "fintech-mobile-app",
-      "title": "FinTech Mobile App",
-      "subtitle": "Mobile App UI/UX",
-      "thumbnail": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&h=600&fit=crop",
+      "id": "verified-visitors-portal",
+      "title": "Verified Visitors Portal",
+      "subtitle": "Cybersecurity and bot-management platform",
+      "thumbnail": "/images/projects/verified-visitors-portal/square_verified-visitors-portal.jpeg",
       "heroImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1600&h=900&fit=crop",
       "description": "A comprehensive mobile banking application designed to simplify personal finance management with intuitive interfaces and seamless user experience.",
       "info": {
@@ -51,10 +51,10 @@
       ]
     },
     {
-      "id": "icon-design-system",
-      "title": "Enterprise Icon System",
-      "subtitle": "Icon Design / Design System",
-      "thumbnail": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop",
+      "id": "xeesty",
+      "title": "Xeesty",
+      "subtitle": "Personalized health and wellness mobile application.",
+      "thumbnail": "/images/projects/xeesty/square_ xeesty.jpeg",
       "heroImage": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1600&h=900&fit=crop",
       "description": "A comprehensive icon library of 500+ custom icons designed for a SaaS platform, ensuring visual consistency and scalability across all touchpoints.",
       "info": {
@@ -95,10 +95,10 @@
       ]
     },
     {
-      "id": "ecommerce-redesign",
-      "title": "E-Commerce Redesign",
-      "subtitle": "Website UI/UX",
-      "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+      "id": "marginswap",
+      "title": "Marginswap",
+      "subtitle": "DeFi Margin Trading Platform",
+      "thumbnail": "/images/projects/marginswap/square_marginswap.jpeg",
       "heroImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&h=900&fit=crop",
       "description": "Complete redesign of a fashion e-commerce platform focusing on improving conversion rates and creating an immersive shopping experience.",
       "info": {
@@ -145,10 +145,10 @@
       ]
     },
     {
-      "id": "dashboard-analytics",
-      "title": "Analytics Dashboard",
-      "subtitle": "Web App UI/UX",
-      "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+      "id": "zf-locations-app",
+      "title": "ZF locations app",
+      "subtitle": "Advanced mobility systems Supplier",
+      "thumbnail": "/images/projects/zf-locations-app/square_zf-locations-app.jpeg",
       "heroImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&h=900&fit=crop",
       "description": "Data visualization dashboard for a marketing analytics platform, transforming complex data into actionable insights through intuitive interfaces.",
       "info": {
