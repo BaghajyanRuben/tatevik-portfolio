@@ -35,6 +35,10 @@ const AboutHero = ({ name, title, photo, bio, bioExtended, location }) => {
                 <img
                   src={photo}
                   alt={name}
+                  width={640}
+                  height={800}
+                  loading="eager"
+                  fetchPriority="high"
                   className="w-full h-full object-cover"
                 />
               </div>

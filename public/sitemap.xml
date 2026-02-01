@@ -5,7 +5,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://tatevikpetrosyan.com/</loc>
-    <lastmod>2024-01-27</lastmod>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -13,15 +13,31 @@
   <!-- About Page -->
   <url>
     <loc>https://tatevikpetrosyan.com/about</loc>
-    <lastmod>2024-01-27</lastmod>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- Projects Page -->
+  <url>
+    <loc>https://tatevikpetrosyan.com/projects</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Testimonials Page -->
+  <url>
+    <loc>https://tatevikpetrosyan.com/testimonials</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Project: FinTech Mobile App -->
   <url>
     <loc>https://tatevikpetrosyan.com/project/fintech-mobile-app</loc>
-    <lastmod>2024-01-27</lastmod>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -29,7 +45,7 @@
   <!-- Project: Enterprise Icon System -->
   <url>
     <loc>https://tatevikpetrosyan.com/project/icon-design-system</loc>
-    <lastmod>2024-01-27</lastmod>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -37,7 +53,7 @@
   <!-- Project: E-Commerce Redesign -->
   <url>
     <loc>https://tatevikpetrosyan.com/project/ecommerce-redesign</loc>
-    <lastmod>2024-01-27</lastmod>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -45,7 +61,7 @@
   <!-- Project: Analytics Dashboard -->
   <url>
     <loc>https://tatevikpetrosyan.com/project/dashboard-analytics</loc>
-    <lastmod>2024-01-27</lastmod>
+    <lastmod>2026-02-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

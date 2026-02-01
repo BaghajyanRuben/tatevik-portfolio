@@ -23,6 +23,10 @@ const ProjectHero = ({ title, description, heroImage }) => {
           <img
             src={heroImage}
             alt={title}
+            width={1200}
+            height={675}
+            loading="eager"
+            fetchPriority="high"
             className="w-full h-auto object-cover"
           />
         </motion.div>

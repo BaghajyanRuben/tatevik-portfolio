@@ -8,6 +8,7 @@ import Projects from './pages/Projects';
 import ProjectDetails from './pages/ProjectDetails';
 import About from './pages/About';
 import Testimonials from './pages/Testimonials';
+import NotFound from './pages/NotFound';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -24,6 +25,7 @@ const AnimatedRoutes = () => {
         <Route path="/project/:slug" element={<ProjectDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   );

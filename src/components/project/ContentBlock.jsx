@@ -34,6 +34,9 @@ const ImageBlock = ({ src, caption, projectTitle }) => {
       <img
         src={src}
         alt={altText}
+        width={1200}
+        height={800}
+        loading="lazy"
         className="w-full h-auto"
       />
       {caption && (
@@ -67,6 +70,9 @@ const GalleryBlock = ({ images, projectTitle }) => {
           <img
             src={image}
             alt={projectTitle ? `${projectTitle} gallery image ${index + 1}` : `Project gallery image ${index + 1}`}
+            width={400}
+            height={400}
+            loading="lazy"
             className="w-full h-full object-cover aspect-square"
           />
         </motion.div>

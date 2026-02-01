@@ -1,0 +1,5 @@
+# Redirect www to non-www (canonical URL)
+https://www.tatevikpetrosyan.com/* https://tatevikpetrosyan.com/:splat 301
+
+# SPA fallback - serve index.html for all routes (handled by Cloudflare Pages automatically)
+/* /index.html 200

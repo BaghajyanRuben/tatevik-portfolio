@@ -37,6 +37,9 @@ const ProductCategory = ({
         <img
           src={imageSrc}
           alt={imageAlt}
+          width={600}
+          height={600}
+          loading="lazy"
           className="aspect-square h-full w-full rounded-[30px] object-cover md:rounded-[50px]"
         />
         <div className="absolute inset-0 rounded-[30px] bg-black/10 md:hidden" />
