@@ -21,6 +21,7 @@ const Projects = () => {
                 titleDarkLines={section.titleDarkLines}
                 titleLight={section.titleLight}
                 mode={section.mode}
+                href={section.href}
                 imageSrc={section.imageSrc}
                 imageAlt={`${section.titleDarkLines.join(' ')} preview`}
               />

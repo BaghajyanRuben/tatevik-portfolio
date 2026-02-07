@@ -4,6 +4,7 @@
       "titleDarkLines": ["UX / UI Design", "Products"],
       "titleLight": "Designing Seamless Digital Experiences",
       "mode": "left",
+      "href": "/projects/ui-ux",
       "imageSrc": "/images/sections/ux_ui_cover.png",
       "imageAlt": "Cover image for the UI/UX section"
     },

@@ -5,6 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Header, Footer } from './components/layout';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
+import UIUXProjects from './pages/UIUXProjects';
 import ProjectDetails from './pages/ProjectDetails';
 import About from './pages/About';
 import Testimonials from './pages/Testimonials';
@@ -22,6 +23,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projects/ui-ux" element={<UIUXProjects />} />
         <Route path="/project/:slug" element={<ProjectDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/testimonials" element={<Testimonials />} />
