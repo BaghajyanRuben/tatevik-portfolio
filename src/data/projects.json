@@ -325,8 +325,6 @@
       "client": "Ket Services Inc.",
       "heroImage": "",
       "heroMockups": [
-        "/images/projects/ket/square_ket.jpeg",
-        "/images/projects/ket/square_ket.jpeg"
       ],
       "description": "A task-based service marketplace connecting customers with local service providers for home repairs, cleaning, moving, and more. The platform streamlines the process of finding, booking, and managing service appointments.",
       "figmaUrl": "",
@@ -335,50 +333,21 @@
         {
           "title": "",
           "splitView": false,
-          "topImage": "",
-          "titleTextSectionLeft": "The Problem",
+          "topImage": "/images/projects/ket/gallery/gallery_1.png",
+          "titleTextSectionLeft": "",
           "textSectionLeft": [
-            {
-              "topText": "Existing service marketplaces frustrate users with:",
-              "bulletPoints": [
-                "Difficult provider discovery",
-                "Unclear pricing structures",
-                "Poor booking experiences"
-              ],
-              "bottomText": ""
-            }
           ],
-          "titleTextSectionRight": "User Needs",
+          "titleTextSectionRight": "",
           "textSectionRight": [
-            {
-              "topText": "Users needed a simple, trustworthy way to:",
-              "bulletPoints": [
-                "Find qualified service providers quickly",
-                "Compare prices and reviews easily",
-                "Book appointments with confidence",
-                "Track service progress in real-time"
-              ],
-              "bottomText": ""
-            }
           ],
           "bottomImage": ""
         },
         {
           "title": "",
           "splitView": false,
-          "topImage": "",
-          "titleTextSectionLeft": "Solution",
+          "topImage": "/images/projects/ket/gallery/gallery_2.png",
+          "titleTextSectionLeft": "",
           "textSectionLeft": [
-            {
-              "topText": "A user-friendly marketplace that:",
-              "bulletPoints": [
-                "Simplifies provider discovery with smart filters",
-                "Displays transparent pricing upfront",
-                "Streamlines the booking flow",
-                "Provides real-time service tracking"
-              ],
-              "bottomText": "The interface builds trust through transparency and ease of use."
-            }
           ],
           "titleTextSectionRight": "",
           "textSectionRight": [],
@@ -387,8 +356,6 @@
       ],
       "gallery": {
         "images": [
-          "/images/projects/ket/square_ket.jpeg",
-          "/images/projects/ket/square_ket.jpeg"
         ]
       }
     }
