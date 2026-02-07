@@ -325,8 +325,8 @@
       "client": "Ket Services Inc.",
       "heroImage": "",
       "heroMockups": [
-        "/images/projects/ket/mockup-1.png",
-        "/images/projects/ket/mockup-2.png"
+        "/images/projects/ket/square_ket.jpeg",
+        "/images/projects/ket/square_ket.jpeg"
       ],
       "description": "A task-based service marketplace connecting customers with local service providers for home repairs, cleaning, moving, and more. The platform streamlines the process of finding, booking, and managing service appointments.",
       "figmaUrl": "",
@@ -387,8 +387,8 @@
       ],
       "gallery": {
         "images": [
-          "/images/projects/ket/gallery-1.png",
-          "/images/projects/ket/gallery-2.png"
+          "/images/projects/ket/square_ket.jpeg",
+          "/images/projects/ket/square_ket.jpeg"
         ]
       }
     }
