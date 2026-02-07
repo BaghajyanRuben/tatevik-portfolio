@@ -88,7 +88,7 @@ const Footer = () => {
 
           <TypewriterText
             text="Designed by Tatevik. Built by AI. Zero drama."
-            className="font-mono text-sm text-white/80 sm:text-base md:text-lg lg:text-xl lg:text-center"
+            className="font-mono text-sm text-[#FF07DE] sm:text-base md:text-lg lg:text-xl lg:text-center"
           />
         </div>
       </div>
