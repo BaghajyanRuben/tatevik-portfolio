@@ -52,7 +52,33 @@
       "titleDarkLines": ["Icon"],
       "titleLight": "that simplify interfaces and guide users.",
       "mode": "left",
+      "href": "/projects/icons",
       "imageSrc": "/images/sections/icon_cover.png",
-      "imageAlt": "Cover image for the Icons section"
+      "imageAlt": "Cover image for the Icons section",
+      "sections": [
+        {
+          "type": "grid",
+          "images": [
+            "/images/projects/icons/icon_1.png",
+            "/images/projects/icons/icon_2.png",
+            "/images/projects/icons/icon_3.png",
+            "/images/projects/icons/icon_4.png"
+          ]
+        },
+        {
+          "type": "banner",
+          "bannerImage": "/images/projects/icons/banner_1.png",
+          "alt": "Featured icon design showcase"
+        },
+        {
+          "type": "grid",
+          "images": [
+            "/images/projects/icons/icon_5.png",
+            "/images/projects/icons/icon_6.png",
+            "/images/projects/icons/icon_7.png",
+            "/images/projects/icons/icon_8.png"
+          ]
+        }
+      ]
     }
 ]
