@@ -7,7 +7,7 @@ const ProjectCategoriesSection = ({ categories }) => {
   if (!categories || categories.length === 0) return null;
 
   return (
-    <section className="section pt-0">
+    <section className="section py-0">
       <div className="container">
         <motion.div
           ref={ref}

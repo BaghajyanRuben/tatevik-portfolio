@@ -140,7 +140,7 @@ const InfoSection = ({ info, projectTitle }) => {
   // Split View Layout (images on sides, text in middle on desktop)
   if (splitView) {
     return (
-      <section className="section">
+      <section className="section py-0">
         <div className="container">
           <motion.div
             ref={ref}
@@ -221,7 +221,7 @@ const InfoSection = ({ info, projectTitle }) => {
 
   // Default Layout
   return (
-    <section className="section">
+    <section className="section py-0">
       <div className="container">
         <motion.div
           ref={ref}

@@ -7,7 +7,7 @@ const ProjectPrototypeSection = ({ figmaUrl, title }) => {
   }
 
   return (
-    <section className="section bg-gray-50">
+    <section className="section py-0 bg-gray-50">
       <div className="container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

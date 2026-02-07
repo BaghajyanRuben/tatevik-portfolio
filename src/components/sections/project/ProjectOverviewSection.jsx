@@ -9,7 +9,7 @@ const ProjectOverviewSection = ({ overview }) => {
   const { text, role, duration, tools } = overview;
 
   return (
-    <section className="section pt-0">
+    <section className="section py-0">
       <div className="container">
         <motion.div
           ref={ref}
