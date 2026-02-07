@@ -13,8 +13,39 @@
       "titleDarkLines": ["Logo"],
       "titleLight": "Transforming ideas into timeless brand symbols.",
       "mode": "right",
+      "href": "/projects/logo",
       "imageSrc": "/images/sections/logo_cover.png",
-      "imageAlt": "Cover image for the Logo section"
+      "imageAlt": "Cover image for the Logo section",
+      "sections": [
+        {
+          "type": "grid",
+          "images": [
+            "/images/projects/logos/gallery_1.png",
+            "/images/projects/logos/gallery_2.jpeg",
+            "/images/projects/logos/gallery_3.jpeg",
+            "/images/projects/logos/gallery_4.jpeg"
+          ]
+        },
+        {
+          "type": "banner",
+          "bannerImage": "/images/projects/logos/gallery_10_big.jpeg",
+          "alt": "Featured logo design showcase"
+        },
+        {
+          "type": "grid",
+          "images": [
+            "/images/projects/logos/gallery_5.jpeg",
+            "/images/projects/logos/gallery_6.jpeg",
+            "/images/projects/logos/gallery_7.png",
+            "/images/projects/logos/gallery_8.jpeg"
+          ]
+        },
+        {
+          "type": "banner",
+          "bannerImage": "/images/projects/logos/gallery_9_big.jpeg",
+          "alt": "Featured logo design showcase"
+        }
+      ]
     },
     {
       "id": "icons",

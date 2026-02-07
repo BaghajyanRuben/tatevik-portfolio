@@ -6,6 +6,7 @@ import { Header, Footer } from './components/layout';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
 import UIUXProjects from './pages/UIUXProjects';
+import LogoProjects from './pages/LogoProjects';
 import ProjectDetails from './pages/ProjectDetails';
 import About from './pages/About';
 import Testimonials from './pages/Testimonials';
@@ -24,6 +25,7 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/ui-ux" element={<UIUXProjects />} />
+        <Route path="/projects/logo" element={<LogoProjects />} />
         <Route path="/project/:slug" element={<ProjectDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/testimonials" element={<Testimonials />} />
