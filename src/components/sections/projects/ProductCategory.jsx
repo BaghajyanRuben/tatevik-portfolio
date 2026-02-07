@@ -14,8 +14,8 @@ const ProductCategory = ({
     <section
       className={`flex flex-col gap-8 md:gap-12 md:flex-row md:items-stretch ${isImageLeft ? 'md:flex-row-reverse' : ''}`}
     >
-      <div className="hidden h-full w-full flex-col gap-6 md:flex md:w-1/2 md:aspect-square md:justify-between">
-        <div className="text-[54px] leading-tight">
+      <div className="hidden w-full flex-col gap-8 md:flex md:w-1/2 md:justify-between">
+        <div className="text-[clamp(2rem,4vw,3.375rem)] leading-tight">
           <span className="block text-primary">
             {titleDarkLines.map((line) => (
               <span key={line} className="block">
