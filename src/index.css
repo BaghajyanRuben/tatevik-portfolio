@@ -148,7 +148,7 @@
   }
 
   .card {
-    @apply relative overflow-hidden rounded-[30px] bg-white cursor-pointer md:rounded-[50px];
+    @apply relative overflow-hidden rounded-[24px] bg-white cursor-pointer md:rounded-[32px];
   }
 
   .card-media {
@@ -156,11 +156,13 @@
   }
 
   .card-overlay {
-    @apply absolute inset-x-0 bottom-0 min-h-full bg-primary/60 flex items-end p-[50px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)];
+    @apply absolute inset-x-0 bottom-0 min-h-full bg-primary/60 flex items-end pt-[20px] pb-[50px] px-[50px] transition-all duration-300 ease-[cubic-bezier(0.4,0,0.2,1)];
   }
 
-  .card:hover .card-overlay {
-    min-height: 0;
+  @media (min-width: 768px) {
+    .card:hover .card-overlay {
+      min-height: 0;
+    }
   }
 
   .info-card {

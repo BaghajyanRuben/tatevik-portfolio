@@ -1,11 +1,10 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { PageTransition } from '../components/layout';
-import { ProjectHero, ProjectInfo } from '../components/project';
+import { ProjectHero } from '../components/project';
 import { Button } from '../components/ui';
 import SEO from '../components/SEO';
 import projectsData from '../data/projects.json';
 import {
-  ProjectBackLink,
   ProjectContent,
   ProjectPrototypeSection,
   ProjectNextSection,
@@ -46,14 +45,10 @@ const ProjectDetails = () => {
     "description": project.description,
     "image": project.heroImage,
     "url": `https://tatevikpetrosyan.com/project/${project.id}`,
-    "dateCreated": project.info.year,
     "creator": {
       "@type": "Person",
-      "name": "Tatevik Petrosyan",
-      "jobTitle": project.info.role
+      "name": "Tatevik Petrosyan"
     },
-    "genre": project.info.type,
-    "keywords": project.info.tools.join(', '),
     "thumbnailUrl": project.thumbnail
   };
 
@@ -65,19 +60,15 @@ const ProjectDetails = () => {
         url={`/project/${project.id}`}
         image={project.heroImage}
         type="article"
-        keywords={`${project.title}, ${project.subtitle}, ${project.info.tools.join(', ')}, ${project.info.type}, Case Study`}
+        keywords={`${project.title}, ${project.subtitle}, Case Study`}
         structuredData={structuredData}
       />
-      <main className="page-main">
-        <ProjectBackLink onBack={() => navigate(-1)} />
-
+      <main className="page-main page-main-top">
         <ProjectHero
           title={project.title}
           description={project.description}
           heroImage={project.heroImage}
         />
-
-        <ProjectInfo info={project.info} />
 
         <ProjectContent sections={project.sections} projectTitle={project.title} />
 

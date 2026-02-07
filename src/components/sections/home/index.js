@@ -1,2 +1,2 @@
 export { default as HomeHero } from './HomeHero';
-export { default as SelectedWork } from './SelectedWork';
+export { default as TopProjects } from './TopProjects';

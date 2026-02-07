@@ -5,14 +5,9 @@
       "title": "Verified Visitors Portal",
       "subtitle": "Cybersecurity and bot-management platform",
       "thumbnail": "/images/projects/verified-visitors-portal/square_verified-visitors-portal.jpeg",
+      "top": true,
       "heroImage": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=1600&h=900&fit=crop",
       "description": "A comprehensive mobile banking application designed to simplify personal finance management with intuitive interfaces and seamless user experience.",
-      "info": {
-        "role": "Lead UI/UX Designer",
-        "tools": ["Figma", "Principle", "Maze"],
-        "type": "Mobile App",
-        "year": "2024"
-      },
       "figmaUrl": "",
       "sections": [
         {
@@ -55,14 +50,9 @@
       "title": "Xeesty",
       "subtitle": "Personalized health and wellness mobile application.",
       "thumbnail": "/images/projects/xeesty/square_ xeesty.jpeg",
+      "top": true,
       "heroImage": "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=1600&h=900&fit=crop",
       "description": "A comprehensive icon library of 500+ custom icons designed for a SaaS platform, ensuring visual consistency and scalability across all touchpoints.",
-      "info": {
-        "role": "Icon Designer",
-        "tools": ["Illustrator", "Figma", "SVG"],
-        "type": "Icon System",
-        "year": "2024"
-      },
       "figmaUrl": "",
       "sections": [
         {
@@ -99,14 +89,9 @@
       "title": "Marginswap",
       "subtitle": "DeFi Margin Trading Platform",
       "thumbnail": "/images/projects/marginswap/square_marginswap.jpeg",
+      "top": true,
       "heroImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1600&h=900&fit=crop",
       "description": "Complete redesign of a fashion e-commerce platform focusing on improving conversion rates and creating an immersive shopping experience.",
-      "info": {
-        "role": "UI/UX Designer",
-        "tools": ["Figma", "Hotjar", "Google Analytics"],
-        "type": "Website",
-        "year": "2023"
-      },
       "figmaUrl": "",
       "sections": [
         {
@@ -149,14 +134,9 @@
       "title": "ZF locations app",
       "subtitle": "Advanced mobility systems Supplier",
       "thumbnail": "/images/projects/zf-locations-app/square_zf-locations-app.jpeg",
+      "top": true,
       "heroImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&h=900&fit=crop",
       "description": "Data visualization dashboard for a marketing analytics platform, transforming complex data into actionable insights through intuitive interfaces.",
-      "info": {
-        "role": "Product Designer",
-        "tools": ["Figma", "D3.js concepts", "Miro"],
-        "type": "Web Application",
-        "year": "2023"
-      },
       "figmaUrl": "",
       "sections": [
         {
