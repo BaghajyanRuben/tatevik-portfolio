@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { PageTransition } from '../components/layout';
 import { LogoGrid, LogoBanner } from '../components/sections/logo';
+import { ProjectCategoriesSection } from '../components/sections/project';
 import SEO from '../components/SEO';
 import sectionsData from '../data/sections.json';
 import { staggerContainer, staggerItem } from '../hooks/useScrollAnimation';
@@ -36,7 +37,7 @@ const IconsProjects = () => {
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="mb-12 md:mb-16"
+            className=""
           >
             <motion.div variants={staggerItem}>
               <h1 className="text-[clamp(2.5rem,6vw,4rem)] leading-tight mb-6">
@@ -55,7 +56,7 @@ const IconsProjects = () => {
           </motion.section>
 
           {/* Dynamic Sections */}
-          <section className="flex flex-col gap-8 md:gap-12">
+          <section className="flex flex-col gap-8 md:gap-12 mt-12 md:mt-16">
             {sections.map((section, index) => {
               if (section.type === 'grid') {
                 return <LogoGrid key={`grid-${index}`} images={section.images} />;
@@ -73,6 +74,9 @@ const IconsProjects = () => {
             })}
           </section>
         </div>
+
+        {/* Category Navigation */}
+        <ProjectCategoriesSection excludePath="/projects/icons" />
       </main>
     </PageTransition>
   );

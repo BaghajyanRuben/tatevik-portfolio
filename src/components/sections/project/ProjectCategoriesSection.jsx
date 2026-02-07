@@ -3,24 +3,29 @@ import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import { useScrollAnimation, scrollVariants } from '../../../hooks/useScrollAnimation';
 
-const categoryLinks = [
+const allCategoryLinks = [
   { path: '/projects/ui-ux', label: 'UX / UI Design Products' },
   { path: '/projects/logo', label: 'Logo' },
   { path: '/projects/icons', label: 'Icons' },
 ];
 
-const ProjectCategoriesSection = () => {
+const ProjectCategoriesSection = ({ excludePath }) => {
   const { ref, isInView } = useScrollAnimation();
 
+  // Filter out the current page's link if excludePath is provided
+  const categoryLinks = excludePath
+    ? allCategoryLinks.filter((link) => link.path !== excludePath)
+    : allCategoryLinks;
+
   return (
-    <section className="section py-0">
+    <section className="section py-6 text-left">
       <div className="container">
         <motion.div
           ref={ref}
           initial="hidden"
           animate={isInView ? 'visible' : 'hidden'}
           variants={scrollVariants}
-          className="flex flex-wrap justify-start gap-3"
+          className="flex flex-wrap items-start justify-start gap-3 w-full"
         >
           {categoryLinks.map((link, index) => (
             <motion.div

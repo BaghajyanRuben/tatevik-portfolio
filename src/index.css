@@ -63,7 +63,7 @@
   }
 
   .page-main {
-    @apply pb-20;
+    @apply pb-0;
   }
 
   .page-main-top {

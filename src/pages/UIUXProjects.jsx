@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { PageTransition } from '../components/layout';
 import { ProjectGrid } from '../components/home';
-import DesigningSuccess from '../components/sections/home/DesigningSuccess';
+import { ProjectCategoriesSection } from '../components/sections/project';
 import SEO from '../components/SEO';
 import projectsData from '../data/projects.json';
 import { staggerContainer, staggerItem } from '../hooks/useScrollAnimation';
@@ -46,7 +46,7 @@ const UIUXProjects = () => {
             variants={staggerContainer}
             initial="hidden"
             animate="visible"
-            className="mb-12 md:mb-16"
+            className=""
           >
             <motion.div variants={staggerItem}>
               <h1 className="text-[clamp(2.5rem,6vw,4rem)] leading-tight mb-6">
@@ -64,15 +64,13 @@ const UIUXProjects = () => {
           </motion.section>
 
           {/* Projects Grid */}
-          <section className="mb-16 md:mb-24">
+          <section className="mt-12 md:mt-16">
             <ProjectGrid projects={uiuxProjects} />
           </section>
-
-          {/* Designing Success Section */}
-          <section className="mb-16">
-            <DesigningSuccess />
-          </section>
         </div>
+
+        {/* Category Navigation */}
+        <ProjectCategoriesSection excludePath="/projects/ui-ux" />
       </main>
     </PageTransition>
   );
