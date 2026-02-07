@@ -5,9 +5,11 @@ import { Button } from '../components/ui';
 import SEO from '../components/SEO';
 import projectsData from '../data/projects.json';
 import {
-  ProjectContent,
   ProjectPrototypeSection,
-  ProjectNextSection,
+  ProjectOverviewSection,
+  ProjectGallerySection,
+  ProjectCategoriesSection,
+  InfoSection,
 } from '../components/sections/project';
 
 const ProjectDetails = () => {
@@ -37,13 +39,16 @@ const ProjectDetails = () => {
     );
   }
 
+  // Get hero image for SEO (use first mockup if no heroImage)
+  const seoImage = project.heroImage || (project.heroMockups && project.heroMockups[0]) || project.thumbnail;
+
   // Structured data for the project (CreativeWork)
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
     "name": project.title,
     "description": project.description,
-    "image": project.heroImage,
+    "image": seoImage,
     "url": `https://tatevikpetrosyan.com/project/${project.id}`,
     "creator": {
       "@type": "Person",
@@ -58,23 +63,52 @@ const ProjectDetails = () => {
         title={project.title}
         description={project.description}
         url={`/project/${project.id}`}
-        image={project.heroImage}
+        image={seoImage}
         type="article"
         keywords={`${project.title}, ${project.subtitle}, Case Study`}
         structuredData={structuredData}
       />
       <main className="page-main page-main-top">
+        {/* Hero Section - Always shown */}
         <ProjectHero
           title={project.title}
+          subtitle={project.subtitle}
+          detailedPageInfo={project.detailedPageInfo}
           description={project.description}
+          industry={project.industry}
+          client={project.client}
           heroImage={project.heroImage}
+          heroMockups={project.heroMockups}
         />
 
-        <ProjectContent sections={project.sections} projectTitle={project.title} />
+        {/* Overview Section - Shown if overview data exists */}
+        <ProjectOverviewSection overview={project.overview} />
 
-        <ProjectPrototypeSection figmaUrl={project.figmaUrl} title={project.title} />
+        {/* Info Sections - Dynamically render all info sections */}
+        {project.infoSections && project.infoSections.length > 0 && (
+          project.infoSections.map((info, index) => (
+            <InfoSection
+              key={index}
+              info={info}
+              projectTitle={project.title}
+            />
+          ))
+        )}
 
-        <ProjectNextSection onNext={() => navigate('/')} />
+        {/* Gallery Section - Shown if gallery images exist */}
+        <ProjectGallerySection 
+          gallery={project.gallery} 
+          projectTitle={project.title} 
+        />
+
+        {/* Prototype Section - Shown if figmaUrl exists */}
+        <ProjectPrototypeSection 
+          figmaUrl={project.figmaUrl} 
+          title={project.title} 
+        />
+
+        {/* Categories Section - Shown if categories exist */}
+        <ProjectCategoriesSection categories={project.categories} />
       </main>
     </PageTransition>
   );

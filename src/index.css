@@ -76,11 +76,11 @@
   }
 
   .section {
-    @apply py-16;
+    @apply py-8;
   }
 
   .section-muted {
-    @apply py-16 bg-primary/[0.02];
+    @apply py-8 bg-primary/[0.02];
   }
 
   .section-heading {
@@ -213,6 +213,15 @@
 
   .cursor-blink {
     animation: blink 1s step-end infinite;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
   }
 }
 
