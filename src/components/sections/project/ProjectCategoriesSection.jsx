@@ -18,7 +18,7 @@ const ProjectCategoriesSection = ({ excludePath }) => {
     : allCategoryLinks;
 
   return (
-    <section className="section py-6 text-left">
+    <section className="section pt-6 pb-[60px] text-left">
       <div className="container">
         <motion.div
           ref={ref}

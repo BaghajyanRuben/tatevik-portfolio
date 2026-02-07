@@ -12,7 +12,7 @@ const Projects = () => {
         url="/projects"
         keywords="Projects, UI/UX, Logo Design, Icon Design, Portfolio"
       />
-      <main className="page-main page-main-top">
+      <main className="page-main page-main-top pb-[60px]">
         <div className="container">
           <div className="flex flex-col gap-8 md:gap-16">
             {sectionsData.map((section) => (
