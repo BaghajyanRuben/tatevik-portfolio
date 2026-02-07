@@ -358,6 +358,54 @@
         "images": [
         ]
       }
+    },
+    {
+      "id": "custom_compiler",
+      "title": "Custom Compiler by Synopsys Inc.",
+      "subtitle": "Task-Based Service Marketplace",
+      "detailedPageInfo": {
+        "darkText": "Custom Compiler",
+        "lightText": "by Synopsys Inc."
+      },
+      "thumbnail": "/images/projects/custom-compiler/square_cc.jpeg",
+      "top": false,
+      "industry": "Electronic Design Automation",
+      "client": "Synopsys Inc.",
+      "heroImage": "",
+      "heroMockups": [
+      ],
+      "description": "Synopsys Custom Compiler is a professional EDA tool for full-custom analog and mixed-signal IC design.I designed a high-density, function-driven icon system optimized for expert workflows—using precise geometry, consistent stroke weights, and semantic color coding to support fast recognition, complex layer management, and long sessions in a dark technical environment.",
+      "figmaUrl": "",
+      "categories": ["UX/UI Projects", "Web"],
+      "infoSections": [
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/square_cc.jpeg",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [
+          ],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/square_cc.jpeg",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        }
+      ],
+      "gallery": {
+        "images": [
+        ]
+      }
     }
   ]
 }
