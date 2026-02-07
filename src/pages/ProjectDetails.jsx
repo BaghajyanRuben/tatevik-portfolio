@@ -107,8 +107,8 @@ const ProjectDetails = () => {
           title={project.title} 
         />
 
-        {/* Categories Section - Shown if categories exist */}
-        <ProjectCategoriesSection categories={project.categories} />
+        {/* Categories Section - Navigation to project categories */}
+        <ProjectCategoriesSection />
       </main>
     </PageTransition>
   );
