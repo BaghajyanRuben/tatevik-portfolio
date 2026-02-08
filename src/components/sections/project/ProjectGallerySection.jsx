@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollAnimation, scrollVariants } from '../../../hooks/useScrollAnimation';
@@ -6,6 +6,8 @@ import { useScrollAnimation, scrollVariants } from '../../../hooks/useScrollAnim
 const ProjectGallerySection = ({ gallery, projectTitle }) => {
   const { ref, isInView } = useScrollAnimation();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [sliderHeight, setSliderHeight] = useState(null);
+  const imageRef = useRef(null);
 
   if (!gallery || !gallery.images || gallery.images.length === 0) return null;
 
@@ -52,6 +54,12 @@ const ProjectGallerySection = ({ gallery, projectTitle }) => {
     setPage([page + newDirection, newDirection]);
   };
 
+  const handleImageLoad = (e) => {
+    if (!sliderHeight && e.target) {
+      setSliderHeight(e.target.offsetHeight);
+    }
+  };
+
   return (
     <section className="section pt-8 pb-0">
       <div className="container">
@@ -63,10 +71,14 @@ const ProjectGallerySection = ({ gallery, projectTitle }) => {
           className="relative"
         >
           {/* Slider Container */}
-          <div className="relative w-full overflow-hidden rounded-2xl">
+          <div 
+            className="relative w-full overflow-hidden rounded-2xl"
+            style={sliderHeight ? { height: `${sliderHeight}px` } : {}}
+          >
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.img
                 key={currentIndex}
+                ref={imageRef}
                 src={images[currentIndex]}
                 alt={`${projectTitle} design ${currentIndex + 1}`}
                 custom={direction}
@@ -78,8 +90,9 @@ const ProjectGallerySection = ({ gallery, projectTitle }) => {
                   x: { type: 'spring', stiffness: 300, damping: 30 },
                   opacity: { duration: 0.2 }
                 }}
-                className="w-full h-auto"
+                className="w-full h-full object-contain"
                 loading={currentIndex === 0 ? 'eager' : 'lazy'}
+                onLoad={handleImageLoad}
               />
             </AnimatePresence>
 
