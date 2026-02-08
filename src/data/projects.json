@@ -20,27 +20,16 @@
       "infoSections": [
         {
           "title": "",
-          "splitView": false,
-          "topImage": "",
-          "titleTextSectionLeft": "The Problem",
+          "splitView": true,
+          "topImage": "/images/projects/verified-visitors-portal/gallery/gallery_1.png",
+          "titleTextSectionLeft": "Legacy Experience",
           "textSectionLeft": [
             {
-              "topText": "Many security platforms overwhelm users with:",
-              "bulletPoints": [
-                "Complex technical language",
-                "Lack of clear data visualization",
-                "Difficult threat identification"
-              ],
+              "topText": "As automated attacks grew in volume and sophistication, the original Command & Control Center struggled to support fast and confident security decision-making. While the platform provided extensive data on bots, attack types, domains, and paths, the experience was heavily data-driven and required users to manually interpret threat severity, context, and next steps.",
               "bottomText": ""
             },
             {
-              "topText": "Users needed a simple, friendly, and structured way to:",
-              "bulletPoints": [
-                "Track security metrics like threats blocked",
-                "Monitor traffic patterns and visitor behavior",
-                "Manage security rules and configurations",
-                "See protection status at a glance"
-              ],
+              "topText": "As a result, users spent more time analyzing information than taking action, increasing response times and reducing confidence in security decisions.",
               "bottomText": ""
             }
           ],
@@ -53,29 +42,137 @@
           "title": "",
           "splitView": false,
           "topImage": "",
-          "titleTextSectionLeft": "Solution",
+          "titleTextSectionLeft": "Executive Objective & Goals",
           "textSectionLeft": [
             {
-              "topText": "A user-centered security platform that:",
-              "bulletPoints": [
-                "Organizes security information into clear sections",
-                "Personalizes dashboards based on user needs",
-                "Provides real-time threat monitoring and alerts",
-                "Visualizes data using friendly charts and indicators"
-              ],
-              "bottomText": "The interface balances data clarity with a professional, trustworthy visual language."
+              "topText": "The objective of this redesign was to transform the Command & Control Center from a data-heavy monitoring dashboard into an actionable security platform that enables faster threat detection, clear prioritization, and confident mitigation decisions. The redesign focused on reducing cognitive load through strong visual hierarchy, clearly separating high-risk automated traffic from legitimate visitors, and directly connecting insights to mitigation actions. By making threat context more transparent and workflows more intuitive, the platform now supports both technical and non-technical users, reduces false positives, and balances strong security with business continuity and performance."
             }
           ],
           "titleTextSectionRight": "",
           "textSectionRight": [],
-          "bottomImage": "/images/projects/verified-visitors-portal/solution.jpeg"
+          "bottomImage": "/images/projects/verified-visitors-portal/gallery/gallery_2.png"
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "",
+          "titleTextSectionLeft": "Product User Challenges",
+          "textSectionLeft": [
+            {
+              "topText": "",
+              "bulletPoints": [
+                "Identifying Real Threats Quickly"
+              ],
+              "bottomText": "Users struggled to immediately distinguish high-risk automated attacks from benign or managed traffic. Critical threats were buried within large volumes of data, slowing response times and increasing the risk of missed incidents."
+            },
+            {
+              "topText": "",
+              "bulletPoints": [
+                "Interpreting Complex Security Data"
+              ],
+              "bottomText": "The platform exposed detailed metrics, logs, and tables, but required users to manually interpret numbers and patterns. This created a steep learning curve and made everyday security decisions cognitively demanding."
+            },
+            {
+              "topText": "",
+              "bulletPoints": [
+                "Lack of Clear Context Across Views"
+              ],
+              "bottomText": "Threat data was fragmented across attack types, domains, and paths, making it difficult to understand the full story of an incident where it originated, how it behaved, and what action was required."
+            },
+            {
+              "topText": "",
+              "bulletPoints": [
+                "Uncertainty When Taking Action"
+              ],
+              "bottomText": "Without clear guidance or prioritization, users were often unsure whether to block, allow, or challenge traffic. This hesitation increased the likelihood of over-blocking legitimate visitors or allowing harmful automation."
+            }
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [
+          ],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "",
+          "titleTextSectionLeft": "UX Strategy",
+          "textSectionLeft": [
+            {
+              "topText": "The UX strategy focuses on clarity, speed, and action. Complex security data is simplified through clear hierarchy and progressive disclosure, helping users quickly understand what’s happening without overload."
+            },
+            {
+              "topText": "Insights are directly connected to mitigation actions, reducing context switching and enabling fast response. Consistent layouts, scan-friendly visuals, and transparent logs build trust and support both non-technical users and security experts."
+            },
+            {
+              "topText": "Result: a clear, intuitive experience that turns security insights into confident action."
+            }
+          ],
+          "titleTextSectionRight": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "",
+          "titleTextSectionLeft": "Solution",
+          "textSectionLeft": [
+            {
+              "topText": "To address the challenges of monitoring and mitigating automated attacks at scale, we designed a centralized Command & Control dashboard combined with interactive domain and path lists that turn security data into immediate action."
+            },
+            {
+              "topText": "Unified Security Dashboard",
+              "bottomText": "The dashboard provides a real-time, high-level view of automated traffic and attack activity across all connected sites. Visual indicators and color-coded metrics clearly distinguish high-risk traffic, mitigated threats, and managed services, allowing users to quickly assess overall system health. This layout enables fast decision-making without requiring deep security expertise."
+            },
+            {
+              "topText": "Interactive Domain Lists \n Each domain is presented in an interactive list showing:",
+              "bulletPoints": [
+                "Number of detected attacks",
+                "Visual traffic intensity per domain",
+                "Selection controls for bulk actions"
+              ]
+            },
+            {
+              "topText": "Users can instantly compare domains, identify the most targeted sites, and apply mitigation strategies directly from the list. This removes the need to navigate through multiple screens and significantly reduces response time."
+            },
+            {
+              "topText": "Path-Level Insights",
+              "bottomText": "The domain view drills down into path-specific attack data (e.g. admin panels, APIs). By surfacing the most abused paths, the interface helps users understand where and how attacks occur, enabling precise, targeted protection instead of broad blocking rules."
+            },
+            {
+              "topText": "Immediate Mitigation Actions",
+              "bottomText": "Rule creation and mitigation options (such as Captcha or allowlisting) are embedded directly into the workflow. Users can move seamlessly from insight to action, creating and applying rules in seconds."
+            },
+            {
+              "topText": "Transparency Through Playback Logs",
+              "bottomText": "A detailed playback log provides full visibility into detected events, including timestamps, user agents, IPs, and reasons for flagging. This ensures auditability, trust, and confidence in the system’s automated decisions."
+            },
+            {
+              "topText": "Result:",
+              "bottomText": "The combination of a clear dashboard and interactive domain lists transforms complex security monitoring into an intuitive, efficient experience—empowering users to detect threats faster, respond smarter, and maintain control across multiple websites."
+            }
+          ],
+          "titleTextSectionRight": ""
+        },
+        {
+          "topImage": "/images/projects/verified-visitors-portal/gallery/gallery_3.png",
+          "bottomImage": "/images/projects/verified-visitors-portal/gallery/gallery_4.png"
+        },
+        {
+          "titleTextSectionLeft": "Additional screens",
+          "textSectionLeft": [
+            {
+              "topText": "Together, these screens extend the dashboard into a cohesive security ecosystem, supporting monitoring, investigation, rule management, and collaboration—without breaking user flow or increasing complexity.",
+              "bottomText": "The full portal experience can be explored by logging in at www.verifiedvisitors.com"
+            }
+          ]
         }
       ],
       "gallery": {
         "images": [
-          "/images/projects/verified-visitors-portal/gallery-1.jpeg",
-          "/images/projects/verified-visitors-portal/gallery-2.jpeg",
-          "/images/projects/verified-visitors-portal/gallery-3.jpeg"
+          "/images/projects/verified-visitors-portal/gallery/gallery_5.png",
+          "/images/projects/verified-visitors-portal/gallery/gallery_6.png",
+          "/images/projects/verified-visitors-portal/gallery/gallery_7.png",
+          "/images/projects/verified-visitors-portal/gallery/gallery_8.png"
         ]
       }
     },
@@ -91,7 +188,7 @@
       "top": true,
       "industry": "Healthcare",
       "client": "GloveVentures Ltd.",
-      "heroImage": "/images/projects/xeesty/hero_image.png",
+      "heroImage": "/images/projects/xeesty/hero.png",
       "heroMockups": [],
       "description": "Xeesty focuses on designing a personalized health and wellness mobile application that helps users better understand, track, and improve their overall well-being. The app addresses common challenges with health tracking apps to create intuitive and user-friendly experiences. The goal was to create a product that feels supportive, motivating, and non-overwhelming, especially for users managing long-term health goals.",
       "figmaUrl": "",
@@ -140,7 +237,7 @@
       ],
       "gallery": {
         "images": [
-          "/images/projects/xeesty/gallery/gallery_0.png"
+          "/images/projects/xeesty/gallery/gallery_01.png"
         ]
       }
     },
@@ -158,72 +255,34 @@
       "client": "MarginSwap LLC",
       "heroImage": "",
       "heroMockups": [
-        "/images/projects/marginswap/mockup-1.png",
-        "/images/projects/marginswap/mockup-2.png"
       ],
-      "description": "A decentralized finance platform for crypto analytics, margin trading, and asset management. The platform enables users to manage balances, execute and monitor long-term assets and margin positions, and access real-time market data and on-chain trading flow.",
+      "description": "A decentralized finance platform for crypto swapping, margin trading, and asset management. The product enables users to manage balances, borrow and repay assets, and monitor key risk metrics through a clear, data-driven dashboard.",
       "figmaUrl": "",
       "categories": ["UX/UI Projects", "Logo", "Icons"],
       "infoSections": [
         {
           "title": "",
           "splitView": false,
-          "topImage": "",
-          "titleTextSectionLeft": "The Problem",
-          "textSectionLeft": [
-            {
-              "topText": "Many DeFi platforms overwhelm users with:",
-              "bulletPoints": [
-                "Complex trading interfaces",
-                "Confusing terminology",
-                "Poor data visualization"
-              ],
-              "bottomText": ""
-            }
-          ],
-          "titleTextSectionRight": "User Needs",
-          "textSectionRight": [
-            {
-              "topText": "Users needed a simple, clear, and structured way to:",
-              "bulletPoints": [
-                "Monitor portfolio performance",
-                "Execute margin trades confidently",
-                "Track real-time market data",
-                "Manage multiple positions at once"
-              ],
-              "bottomText": ""
-            }
-          ],
-          "bottomImage": ""
+          "topImage": "/images/projects/marginswap/gallery/gallery_1.png"
         },
         {
           "title": "",
           "splitView": false,
-          "topImage": "",
-          "titleTextSectionLeft": "Solution",
-          "textSectionLeft": [
-            {
-              "topText": "A streamlined trading platform that:",
-              "bulletPoints": [
-                "Simplifies complex trading mechanics into digestible steps",
-                "Provides real-time market data with clear visualizations",
-                "Guides users through margin trading with contextual help",
-                "Reduces cognitive load with progressive disclosure"
-              ],
-              "bottomText": "The interface prioritizes clarity and confidence in every trading decision."
-            }
-          ],
-          "titleTextSectionRight": "",
-          "textSectionRight": [],
-          "bottomImage": ""
+          "topImage": "/images/projects/marginswap/gallery/gallery_2.png"
+        }, 
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/marginswap/gallery/gallery_3.png"
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/marginswap/gallery/gallery_4.png"
         }
       ],
       "gallery": {
-        "images": [
-          "/images/projects/marginswap/gallery-1.png",
-          "/images/projects/marginswap/gallery-2.png",
-          "/images/projects/marginswap/gallery-3.png"
-        ]
+      
       }
     },
     {
@@ -236,79 +295,25 @@
       },
       "thumbnail": "/images/projects/zf-locations-app/square_zf-locations-app.jpeg",
       "top": true,
-      "industry": "Industrial",
+      "industry": "Industrial Technology",
       "client": "ZF Passau GmbH",
       "heroImage": "",
       "heroMockups": [
-        "/images/projects/zf-locations-app/mockup-1.png",
-        "/images/projects/zf-locations-app/mockup-2.png",
-        "/images/projects/zf-locations-app/mockup-3.png",
-        "/images/projects/zf-locations-app/mockup-4.png",
-        "/images/projects/zf-locations-app/mockup-5.png",
-        "/images/projects/zf-locations-app/mockup-6.png"
       ],
       "description": "ZF is a German technology manufacturing company that supplies systems for passenger cars, commercial vehicles and industrial technology. The application was redesigned to enhance information hierarchy, reduce cognitive load, and improve overall usability.",
       "figmaUrl": "",
       "categories": ["UX/UI Projects", "Logo", "Icons"],
       "infoSections": [
         {
-          "title": "",
-          "splitView": false,
-          "topImage": "",
-          "titleTextSectionLeft": "The Problem",
-          "textSectionLeft": [
-            {
-              "topText": "The legacy app struggled with:",
-              "bulletPoints": [
-                "Outdated visual design",
-                "Poor navigation structure",
-                "Inconsistent user experience"
-              ],
-              "bottomText": ""
-            }
-          ],
-          "titleTextSectionRight": "User Needs",
-          "textSectionRight": [
-            {
-              "topText": "Users needed a modern, intuitive way to:",
-              "bulletPoints": [
-                "Find global location information quickly",
-                "Navigate between facilities seamlessly",
-                "Access wayfinding and directions",
-                "View facility details at a glance"
-              ],
-              "bottomText": ""
-            }
-          ],
-          "bottomImage": ""
+          "topImage": "/images/projects/zf-locations-app/gallery/gallery_1.png",
+          "bottomImage": "/images/projects/zf-locations-app/gallery/gallery_2.png"
         },
         {
-          "title": "",
-          "splitView": false,
-          "topImage": "",
-          "titleTextSectionLeft": "Solution",
-          "textSectionLeft": [
-            {
-              "topText": "An intelligent location management app that:",
-              "bulletPoints": [
-                "Consolidates location data into clear, scannable views",
-                "Provides intuitive wayfinding and navigation",
-                "Features a modern, branded visual design",
-                "Enables quick access to facility information"
-              ],
-              "bottomText": "The interface uses ZF's brand colors with a focus on clarity and efficiency."
-            }
-          ],
-          "titleTextSectionRight": "",
-          "textSectionRight": [],
-          "bottomImage": ""
+          "topImage": "/images/projects/zf-locations-app/gallery/gallery_3.png"
         }
       ],
       "gallery": {
-        "images": [
-          "/images/projects/zf-locations-app/gallery-1.png",
-          "/images/projects/zf-locations-app/gallery-2.png"
-        ]
+      
       }
     },
     {

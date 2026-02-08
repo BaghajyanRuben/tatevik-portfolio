@@ -19,7 +19,7 @@ const ProjectHero = ({ title, subtitle, detailedPageInfo, description, industry,
   const lightText = detailedPageInfo?.lightText || subtitle?.split(' ').slice(1).join(' ') || '';
 
   return (
-    <section className="pb-6 md:pb-8">
+    <section>
       <div className="container">
         {/* Industry & Client Info */}
         {(industry || client) && (
@@ -65,7 +65,7 @@ const ProjectHero = ({ title, subtitle, detailedPageInfo, description, industry,
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.4, 0, 0.2, 1] }}
-            className="body-md text-muted max-w-4xl mb-12"
+            className="body-md text-muted max-w-4xl"
           >
             {description}
           </motion.p>
@@ -77,7 +77,7 @@ const ProjectHero = ({ title, subtitle, detailedPageInfo, description, industry,
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className={`grid ${getMockupGridClass()} gap-4 md:gap-6`}
+            className={`pt-8 grid ${getMockupGridClass()} gap-4 md:gap-6`}
           >
             {heroMockups.map((mockup, index) => (
               <motion.div
@@ -106,7 +106,7 @@ const ProjectHero = ({ title, subtitle, detailedPageInfo, description, industry,
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2, ease: [0.4, 0, 0.2, 1] }}
-            className="rounded-2xl overflow-hidden"
+            className="pt-8 rounded-2xl overflow-hidden"
           >
             <img
               src={heroImage}

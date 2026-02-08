@@ -140,7 +140,7 @@ const InfoSection = ({ info, projectTitle }) => {
   // Split View Layout (images on sides, text in middle on desktop)
   if (splitView) {
     return (
-      <section className="section py-0">
+      <section className="section pt-8 pb-0">
         <div className="container">
           <motion.div
             ref={ref}
@@ -221,7 +221,7 @@ const InfoSection = ({ info, projectTitle }) => {
 
   // Default Layout
   return (
-    <section className="section py-0">
+    <section className="section pt-8 pb-0">
       <div className="container">
         <motion.div
           ref={ref}
@@ -240,7 +240,7 @@ const InfoSection = ({ info, projectTitle }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="mb-8 rounded-2xl overflow-hidden"
+              className={`rounded-2xl overflow-hidden ${hasTextSections ? 'mb-8' : ''}`}
             >
               <img
                 src={topImage}
@@ -279,7 +279,7 @@ const InfoSection = ({ info, projectTitle }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="mt-10 rounded-2xl overflow-hidden"
+              className={`rounded-2xl overflow-hidden ${hasTextSections || topImage ? 'mt-10' : ''}`}
             >
               <img
                 src={bottomImage}

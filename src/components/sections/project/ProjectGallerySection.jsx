@@ -53,7 +53,7 @@ const ProjectGallerySection = ({ gallery, projectTitle }) => {
   };
 
   return (
-    <section className="section py-0">
+    <section className="section pt-8 pb-0">
       <div className="container">
         <motion.div
           ref={ref}
