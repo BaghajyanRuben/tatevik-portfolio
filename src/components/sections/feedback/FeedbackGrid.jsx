@@ -1,33 +1,33 @@
 import { motion } from 'framer-motion';
 import { staggerContainer, staggerItem } from '../../../hooks/useScrollAnimation';
 
-const TestimonialsGrid = ({ testimonials }) => {
+const FeedbackGrid = ({ feedbacks }) => {
   return (
     <motion.div
       variants={staggerContainer}
       initial="hidden"
       animate="visible"
-      className="section-grid"
+      className="section-grid mb-8"
     >
-      {testimonials.map((testimonial) => (
+      {feedbacks.map((feedback) => (
         <motion.article
-          key={`${testimonial.clientName}-${testimonial.projectTitle}`}
+          key={`${feedback.clientName}-${feedback.projectTitle}`}
           variants={staggerItem}
           className="soft-card"
         >
           <div className="flex items-start justify-between gap-4 mb-4">
             <div>
               <p className="text-sm text-muted">Project</p>
-              <p className="font-medium text-primary">{testimonial.projectTitle}</p>
+              <p className="font-medium text-primary">{feedback.projectTitle}</p>
             </div>
             <div
               className="flex items-center gap-1"
-              aria-label={`Rating: ${testimonial.rating} out of 5`}
+              aria-label={`Rating: ${feedback.rating} out of 5`}
             >
               {Array.from({ length: 5 }).map((_, index) => (
                 <span
                   key={index}
-                  className={index < testimonial.rating ? 'text-primary' : 'text-primary/20'}
+                  className={index < feedback.rating ? 'text-primary' : 'text-primary/20'}
                 >
                   ★
                 </span>
@@ -35,12 +35,12 @@ const TestimonialsGrid = ({ testimonials }) => {
             </div>
           </div>
 
-          <p className="body-md mb-6 text-primary/80">“{testimonial.feedback}”</p>
+          <p className="body-md mb-6 text-primary/80">"{feedback.feedback}"</p>
 
           <div className="flex items-center justify-between gap-4">
-            <p className="font-medium text-primary">{testimonial.clientName}</p>
+            <p className="font-medium text-primary">{feedback.clientName}</p>
             <p className="text-sm text-muted">
-              {testimonial.startDate} – {testimonial.endDate}
+              {feedback.startDate} – {feedback.endDate}
             </p>
           </div>
         </motion.article>
@@ -49,4 +49,4 @@ const TestimonialsGrid = ({ testimonials }) => {
   );
 };
 
-export default TestimonialsGrid;
+export default FeedbackGrid;

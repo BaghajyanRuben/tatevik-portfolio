@@ -57,9 +57,9 @@ portfolio/
 │   │   │   │   ├── ProjectsIntro.jsx
 │   │   │   │   ├── ProjectsList.jsx
 │   │   │   │   └── index.js
-│   │   │   ├── testimonials/
-│   │   │   │   ├── TestimonialsIntro.jsx
-│   │   │   │   ├── TestimonialsGrid.jsx
+│   │   │   ├── feedback/
+│   │   │   │   ├── FeedbackIntro.jsx
+│   │   │   │   ├── FeedbackGrid.jsx
 │   │   │   │   └── index.js
 │   │   │   └── index.js
 │   │   ├── layout/
@@ -95,7 +95,7 @@ portfolio/
 │   │   ├── Home.jsx                  # Portfolio landing page
 │   │   ├── ProjectDetails.jsx        # Dynamic project page
 │   │   ├── Projects.jsx              # Projects listing
-│   │   ├── Testimonials.jsx          # Testimonials page
+│   │   ├── Feedback.jsx              # Feedback page
 │   │   └── About.jsx                 # About/bio page
 │   │
 │   ├── data/

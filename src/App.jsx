@@ -10,7 +10,7 @@ import LogoProjects from './pages/LogoProjects';
 import IconsProjects from './pages/IconsProjects';
 import ProjectDetails from './pages/ProjectDetails';
 import About from './pages/About';
-import Testimonials from './pages/Testimonials';
+import Feedback from './pages/Feedback';
 import NotFound from './pages/NotFound';
 
 const AnimatedRoutes = () => {
@@ -30,7 +30,7 @@ const AnimatedRoutes = () => {
         <Route path="/projects/icons" element={<IconsProjects />} />
         <Route path="/project/:slug" element={<ProjectDetails />} />
         <Route path="/about" element={<About />} />
-        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/feedback" element={<Feedback />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>

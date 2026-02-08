@@ -47,7 +47,7 @@ const Footer = () => {
   const navLinks = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About' },
-    { path: '/testimonials', label: 'Testimonials' },
+    { path: '/feedback', label: 'Feedback' },
     { path: '/projects', label: 'Projects' },
   ];
 
