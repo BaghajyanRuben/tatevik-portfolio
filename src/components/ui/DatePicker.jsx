@@ -10,7 +10,9 @@ const DatePicker = ({
   required = false,
   disabled = false,
   className = '',
-  placeholder = ''
+  placeholder = '',
+  max = null,
+  min = null
 }) => {
   // Format value from "Jan 2024" to "2024-01" for input
   const formatValueForInput = (val) => {
@@ -87,6 +89,8 @@ const DatePicker = ({
           placeholder={placeholder}
           disabled={disabled}
           required={required}
+          max={max}
+          min={min}
           className={`w-full px-4 py-3 pr-12 rounded-lg border transition-colors duration-200 focus:outline-none focus:ring-2 ${
             error 
               ? 'border-red-500 focus:ring-red-500/20' 

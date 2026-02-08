@@ -27,6 +27,29 @@ const AddFeedback = () => {
   const { toasts, removeToast, showSuccess, showError } = useToast();
   const { currentUser } = useAuth();
 
+  // Get current date in YYYY-MM format for max date
+  const getCurrentMonth = () => {
+    const now = new Date();
+    const year = now.getFullYear();
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    return `${year}-${month}`;
+  };
+
+  // Convert "MMM YYYY" to "YYYY-MM" for comparison
+  const convertToComparableDate = (dateStr) => {
+    if (!dateStr) return null;
+    const months = {
+      'Jan': '01', 'Feb': '02', 'Mar': '03', 'Apr': '04',
+      'May': '05', 'Jun': '06', 'Jul': '07', 'Aug': '08',
+      'Sep': '09', 'Oct': '10', 'Nov': '11', 'Dec': '12'
+    };
+    const parts = dateStr.split(' ');
+    if (parts.length === 2 && months[parts[0]]) {
+      return `${parts[1]}-${months[parts[0]]}`;
+    }
+    return dateStr;
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -56,6 +79,15 @@ const AddFeedback = () => {
 
     if (!formData.endDate.trim()) {
       newErrors.endDate = 'End date is required';
+    }
+
+    // Validate end date is not before start date
+    if (formData.startDate && formData.endDate) {
+      const startDateStr = convertToComparableDate(formData.startDate);
+      const endDateStr = convertToComparableDate(formData.endDate);
+      if (startDateStr && endDateStr && endDateStr < startDateStr) {
+        newErrors.endDate = 'End date cannot be before start date';
+      }
     }
 
     if (!formData.feedback.trim()) {
@@ -156,6 +188,7 @@ const AddFeedback = () => {
               value={formData.startDate}
               onChange={handleChange}
               error={errors.startDate}
+              max={getCurrentMonth()}
               required
             />
 
@@ -165,6 +198,8 @@ const AddFeedback = () => {
               value={formData.endDate}
               onChange={handleChange}
               error={errors.endDate}
+              min={formData.startDate ? convertToComparableDate(formData.startDate) : undefined}
+              max={getCurrentMonth()}
               required
             />
           </div>
