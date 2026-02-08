@@ -12,7 +12,7 @@
       "top": true,
       "industry": "Software Platform",
       "client": "GloveVentures Ltd.",
-      "heroImage": "/images/projects/verified-visitors-portal/hero.jpeg",
+      "heroImage": "",
       "heroMockups": [],
       "description": "Verified Visitors is a designed to secure websites and online services from automated malicious traffic while improving the quality of real visitor data. It uses artificial intelligence (AI) and machine learning to analyze incoming traffic, differentiate between human visitors and bots, and apply dynamic protections that evolve with threat landscapes.",
       "figmaUrl": "",

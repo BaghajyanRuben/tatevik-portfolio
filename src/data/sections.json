@@ -14,7 +14,7 @@
       "titleLight": "Transforming ideas into timeless brand symbols.",
       "mode": "right",
       "href": "/projects/logo",
-      "imageSrc": "/images/sections/logo_cover.png",
+      "imageSrc": "/images/sections/logos_cover.png",
       "imageAlt": "Cover image for the Logo section",
       "sections": [
         {
@@ -53,7 +53,7 @@
       "titleLight": "that simplify interfaces and guide users.",
       "mode": "left",
       "href": "/projects/icons",
-      "imageSrc": "/images/sections/icon_cover.png",
+      "imageSrc": "/images/sections/icons_cover.png",
       "imageAlt": "Cover image for the Icons section",
       "sections": [
         {
