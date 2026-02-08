@@ -59,6 +59,7 @@ const ProductCategory = ({
           <ActionButton
             href={href}
             label="Explore"
+            tone="light"
             iconClassName="h-4 w-4"
             className="px-4 py-2 text-sm font-normal leading-5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
           />
