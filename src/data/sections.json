@@ -57,27 +57,29 @@
       "imageAlt": "Cover image for the Icons section",
       "sections": [
         {
-          "type": "grid",
-          "images": [
-            "/images/projects/icons/icon_1.png",
-            "/images/projects/icons/icon_2.png",
-            "/images/projects/icons/icon_3.png",
-            "/images/projects/icons/icon_4.png"
-          ]
-        },
-        {
           "type": "banner",
-          "bannerImage": "/images/projects/icons/banner_1.png",
+          "bannerImage": "/images/projects/icons/gallery/gallery_1.png",
           "alt": "Featured icon design showcase"
         },
         {
-          "type": "grid",
-          "images": [
-            "/images/projects/icons/icon_5.png",
-            "/images/projects/icons/icon_6.png",
-            "/images/projects/icons/icon_7.png",
-            "/images/projects/icons/icon_8.png"
-          ]
+          "type": "banner",
+          "bannerImage": "/images/projects/icons/gallery/gallery_2.png",
+          "alt": "Featured icon design showcase"
+        },
+        {
+          "type": "banner",
+          "bannerImage": "/images/projects/icons/gallery/gallery_3.png",
+          "alt": "Featured icon design showcase"
+        },
+        {
+          "type": "banner",
+          "bannerImage": "/images/projects/icons/gallery/gallery_4.png",
+          "alt": "Featured icon design showcase"
+        },
+        {
+          "type": "banner",
+          "bannerImage": "/images/projects/icons/gallery/gallery_5.png",
+          "alt": "Featured icon design showcase"
         }
       ]
     }
