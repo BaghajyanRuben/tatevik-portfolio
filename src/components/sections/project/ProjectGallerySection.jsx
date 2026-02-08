@@ -63,51 +63,49 @@ const ProjectGallerySection = ({ gallery, projectTitle }) => {
           className="relative"
         >
           {/* Slider Container */}
-          <div className="relative w-full overflow-hidden rounded-2xl bg-gray-50">
-            <div className="relative aspect-[16/10] md:aspect-[16/9]">
-              <AnimatePresence initial={false} custom={direction}>
-                <motion.img
-                  key={currentIndex}
-                  src={images[currentIndex]}
-                  alt={`${projectTitle} design ${currentIndex + 1}`}
-                  custom={direction}
-                  variants={slideVariants}
-                  initial="enter"
-                  animate="center"
-                  exit="exit"
-                  transition={{
-                    x: { type: 'spring', stiffness: 300, damping: 30 },
-                    opacity: { duration: 0.2 }
-                  }}
-                  className="absolute inset-0 w-full h-full object-cover"
-                  loading={currentIndex === 0 ? 'eager' : 'lazy'}
-                />
-              </AnimatePresence>
-            </div>
+          <div className="relative w-full overflow-hidden rounded-2xl">
+            <AnimatePresence initial={false} custom={direction} mode="wait">
+              <motion.img
+                key={currentIndex}
+                src={images[currentIndex]}
+                alt={`${projectTitle} design ${currentIndex + 1}`}
+                custom={direction}
+                variants={slideVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{
+                  x: { type: 'spring', stiffness: 300, damping: 30 },
+                  opacity: { duration: 0.2 }
+                }}
+                className="w-full h-auto"
+                loading={currentIndex === 0 ? 'eager' : 'lazy'}
+              />
+            </AnimatePresence>
+
+            {/* Navigation Arrows - Over Image */}
+            {images.length > 1 && (
+              <>
+                {/* Left Arrow */}
+                <button
+                  onClick={() => paginate(-1)}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center transition-all duration-200 hover:bg-black/50 hover:scale-105"
+                  aria-label="Previous slide"
+                >
+                  <ChevronLeft className="w-6 h-6 text-white" />
+                </button>
+
+                {/* Right Arrow */}
+                <button
+                  onClick={() => paginate(1)}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-black/30 backdrop-blur-sm flex items-center justify-center transition-all duration-200 hover:bg-black/50 hover:scale-105"
+                  aria-label="Next slide"
+                >
+                  <ChevronRight className="w-6 h-6 text-white" />
+                </button>
+              </>
+            )}
           </div>
-
-          {/* Navigation Arrows */}
-          {images.length > 1 && (
-            <>
-              {/* Left Arrow */}
-              <button
-                onClick={() => paginate(-1)}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-200 hover:bg-white hover:scale-105"
-                aria-label="Previous slide"
-              >
-                <ChevronLeft className="w-5 h-5 text-gray-700" />
-              </button>
-
-              {/* Right Arrow */}
-              <button
-                onClick={() => paginate(1)}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm shadow-lg flex items-center justify-center transition-all duration-200 hover:bg-white hover:scale-105"
-                aria-label="Next slide"
-              >
-                <ChevronRight className="w-5 h-5 text-gray-700" />
-              </button>
-            </>
-          )}
 
           {/* Dots Indicator */}
           {images.length > 1 && (
