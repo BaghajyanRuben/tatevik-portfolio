@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
+import { AuthProvider } from './contexts/AuthContext';
+import ProtectedRoute from './components/admin/ProtectedRoute';
 import { Header, Footer } from './components/layout';
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -11,10 +13,15 @@ import IconsProjects from './pages/IconsProjects';
 import ProjectDetails from './pages/ProjectDetails';
 import About from './pages/About';
 import Feedback from './pages/Feedback';
+import AdminLogin from './pages/admin/AdminLogin';
+import AdminDashboard from './pages/admin/AdminDashboard';
+import ManageFeedback from './pages/admin/ManageFeedback';
+import AddFeedback from './pages/admin/AddFeedback';
 import NotFound from './pages/NotFound';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
@@ -23,6 +30,7 @@ const AnimatedRoutes = () => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
+        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projects/ui-ux" element={<UIUXProjects />} />
@@ -31,9 +39,50 @@ const AnimatedRoutes = () => {
         <Route path="/project/:slug" element={<ProjectDetails />} />
         <Route path="/about" element={<About />} />
         <Route path="/feedback" element={<Feedback />} />
+        
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route 
+          path="/admin/dashboard" 
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/admin/feedbacks" 
+          element={
+            <ProtectedRoute>
+              <ManageFeedback />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/admin/add" 
+          element={
+            <ProtectedRoute>
+              <AddFeedback />
+            </ProtectedRoute>
+          } 
+        />
+        
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
+  );
+};
+
+const AppContent = () => {
+  const location = useLocation();
+  const isAdminRoute = location.pathname.startsWith('/admin');
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      {!isAdminRoute && <Header />}
+      <AnimatedRoutes />
+      {!isAdminRoute && <Footer />}
+    </div>
   );
 };
 
@@ -41,11 +90,9 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <AnimatedRoutes />
-          <Footer />
-        </div>
+        <AuthProvider>
+          <AppContent />
+        </AuthProvider>
       </Router>
     </HelmetProvider>
   );

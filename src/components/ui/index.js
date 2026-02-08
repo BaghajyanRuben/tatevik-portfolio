@@ -3,3 +3,8 @@ export { default as Card } from './Card';
 export { default as FigmaEmbed } from './FigmaEmbed';
 export { default as ActionButton } from './ActionButton';
 export { default as WorkWithMeButton } from './WorkWithMeButton';
+export { default as Input } from './Input';
+export { default as Textarea } from './Textarea';
+export { default as StarRating } from './StarRating';
+export { default as DatePicker } from './DatePicker';
+export { default as Toast, ToastContainer } from './Toast';

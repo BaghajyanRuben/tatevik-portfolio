@@ -9,7 +9,7 @@ const FeedbackIntro = () => {
       className="section-intro"
     >
       <h1 className="heading-lg mb-4">Feedback</h1>
-      <p className="body-md max-w-2xl">Feedback from clients and collaborators.</p>
+      <p className="body-md max-w-2xl">Read what clients say about working together, and share your own experience.</p>
     </motion.div>
   );
 };
