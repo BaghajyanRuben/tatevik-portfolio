@@ -78,9 +78,9 @@ const DatePicker = ({
           {required && <span className="text-red-500 ml-1">*</span>}
         </label>
       )}
-      <div className="relative">
+      <div className="relative max-w-full">
         <motion.input
-          whileFocus={{ scale: 1.01 }}
+          whileFocus={{ scale: 1 }}
           type="month"
           id={name}
           name={name}
@@ -91,13 +91,13 @@ const DatePicker = ({
           required={required}
           max={max}
           min={min}
-          className={`w-full px-4 py-3 pr-12 rounded-lg border transition-colors duration-200 focus:outline-none focus:ring-2 ${
+          className={`w-full max-w-full min-w-0 px-3 sm:px-4 py-3 pr-10 sm:pr-12 rounded-lg border transition-colors duration-200 focus:outline-none focus:ring-2 ${
             error 
               ? 'border-red-500 focus:ring-red-500/20' 
               : 'border-primary/20 focus:ring-primary/20 focus:border-primary'
           } ${disabled ? 'bg-gray-100 cursor-not-allowed' : 'bg-white'}`}
         />
-        <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-primary/40">
+        <div className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 pointer-events-none text-primary/40">
           <Calendar size={20} />
         </div>
       </div>
