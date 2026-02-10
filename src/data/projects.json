@@ -386,7 +386,7 @@
         {
           "title": "",
           "splitView": false,
-          "topImage": "/images/projects/custom-compiler/square_cc.jpeg",
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_1.png",
           "titleTextSectionLeft": "",
           "textSectionLeft": [
           ],
@@ -398,7 +398,51 @@
         {
           "title": "",
           "splitView": false,
-          "topImage": "/images/projects/custom-compiler/square_cc.jpeg",
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_2.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_3.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_4.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_5.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_6.png",
           "titleTextSectionLeft": "",
           "textSectionLeft": [
           ],
