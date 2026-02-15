@@ -161,6 +161,19 @@ portfolio/
 
 ---
 
+## 📚 Documentation
+
+Comprehensive documentation is available in the `docs/` folder:
+
+- **Setup Guides**: Firebase, R2 Storage, Environment Configuration
+- **Feature Documentation**: Project reordering, file uploads, admin features
+- **Migration Guides**: Data migration and scripts
+- **Troubleshooting**: Common issues and solutions
+
+See [`docs/README.md`](./docs/README.md) for the full documentation index.
+
+---
+
 ## Getting Started
 
 ### Prerequisites

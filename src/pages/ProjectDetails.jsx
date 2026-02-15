@@ -1,9 +1,10 @@
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { PageTransition } from '../components/layout';
 import { ProjectHero } from '../components/project';
 import { Button } from '../components/ui';
 import SEO from '../components/SEO';
-import projectsData from '../data/projects.json';
+import { getProjectById } from '../services/projectService';
 import {
   ProjectPrototypeSection,
   ProjectOverviewSection,
@@ -15,10 +16,54 @@ import {
 const ProjectDetails = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
+  const [project, setProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
 
-  const project = projectsData.projects.find((p) => p.id === slug);
+  useEffect(() => {
+    const fetchProject = async () => {
+      try {
+        setLoading(true);
+        const data = await getProjectById(slug);
+        
+        if (data) {
+          setProject(data);
+          setNotFound(false);
+        } else {
+          setNotFound(true);
+        }
+      } catch (error) {
+        console.error('Error fetching project:', error);
+        setNotFound(true);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  if (!project) {
+    fetchProject();
+  }, [slug]);
+
+  // Loading state
+  if (loading) {
+    return (
+      <PageTransition>
+        <SEO
+          title="Loading..."
+          description="Loading project details"
+          url={`/project/${slug}`}
+        />
+        <main className="page-main page-main-top">
+          <div className="container text-center py-20">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-primary mb-4"></div>
+            <p className="body-md text-muted">Loading project...</p>
+          </div>
+        </main>
+      </PageTransition>
+    );
+  }
+
+  // Not found state
+  if (notFound || !project) {
     return (
       <PageTransition>
         <SEO

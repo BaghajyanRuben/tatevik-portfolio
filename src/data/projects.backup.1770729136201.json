@@ -1,0 +1,460 @@
+{
+  "projects": [
+    {
+      "id": "verified-visitors-portal",
+      "title": "Verified Visitors Portal",
+      "subtitle": "Cybersecurity and bot-management platform",
+      "detailedPageInfo": {
+        "darkText": "Case Study",
+        "lightText": "Verified Visitors Portal"
+      },
+      "thumbnail": "/images/projects/verified-visitors-portal/square_verified-visitors-portal.jpeg",
+      "top": true,
+      "industry": "Software Platform",
+      "client": "GloveVentures Ltd.",
+      "heroImage": "",
+      "heroMockups": [],
+      "description": "Verified Visitors is a designed to secure websites and online services from automated malicious traffic while improving the quality of real visitor data. It uses artificial intelligence (AI) and machine learning to analyze incoming traffic, differentiate between human visitors and bots, and apply dynamic protections that evolve with threat landscapes.",
+      "figmaUrl": "",
+      "categories": [
+        "UX/UI Projects",
+        "Logo",
+        "Icons"
+      ],
+      "infoSections": [
+        {
+          "title": "",
+          "splitView": true,
+          "topImage": "/images/projects/verified-visitors-portal/gallery/gallery_1.png",
+          "titleTextSectionLeft": "Legacy Experience",
+          "textSectionLeft": [
+            {
+              "topText": "As automated attacks grew in volume and sophistication, the original Command & Control Center struggled to support fast and confident security decision-making. While the platform provided extensive data on bots, attack types, domains, and paths, the experience was heavily data-driven and required users to manually interpret threat severity, context, and next steps.",
+              "bottomText": ""
+            },
+            {
+              "topText": "As a result, users spent more time analyzing information than taking action, increasing response times and reducing confidence in security decisions.",
+              "bottomText": ""
+            }
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "",
+          "titleTextSectionLeft": "Executive Objective & Goals",
+          "textSectionLeft": [
+            {
+              "topText": "The objective of this redesign was to transform the Command & Control Center from a data-heavy monitoring dashboard into an actionable security platform that enables faster threat detection, clear prioritization, and confident mitigation decisions. The redesign focused on reducing cognitive load through strong visual hierarchy, clearly separating high-risk automated traffic from legitimate visitors, and directly connecting insights to mitigation actions. By making threat context more transparent and workflows more intuitive, the platform now supports both technical and non-technical users, reduces false positives, and balances strong security with business continuity and performance."
+            }
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": "/images/projects/verified-visitors-portal/gallery/gallery_2.png"
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "",
+          "titleTextSectionLeft": "Product User Challenges",
+          "textSectionLeft": [
+            {
+              "topText": "",
+              "bulletPoints": [
+                "Identifying Real Threats Quickly"
+              ],
+              "bottomText": "Users struggled to immediately distinguish high-risk automated attacks from benign or managed traffic. Critical threats were buried within large volumes of data, slowing response times and increasing the risk of missed incidents."
+            },
+            {
+              "topText": "",
+              "bulletPoints": [
+                "Interpreting Complex Security Data"
+              ],
+              "bottomText": "The platform exposed detailed metrics, logs, and tables, but required users to manually interpret numbers and patterns. This created a steep learning curve and made everyday security decisions cognitively demanding."
+            },
+            {
+              "topText": "",
+              "bulletPoints": [
+                "Lack of Clear Context Across Views"
+              ],
+              "bottomText": "Threat data was fragmented across attack types, domains, and paths, making it difficult to understand the full story of an incident where it originated, how it behaved, and what action was required."
+            },
+            {
+              "topText": "",
+              "bulletPoints": [
+                "Uncertainty When Taking Action"
+              ],
+              "bottomText": "Without clear guidance or prioritization, users were often unsure whether to block, allow, or challenge traffic. This hesitation increased the likelihood of over-blocking legitimate visitors or allowing harmful automation."
+            }
+          ],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "",
+          "titleTextSectionLeft": "UX Strategy",
+          "textSectionLeft": [
+            {
+              "topText": "The UX strategy focuses on clarity, speed, and action. Complex security data is simplified through clear hierarchy and progressive disclosure, helping users quickly understand what’s happening without overload."
+            },
+            {
+              "topText": "Insights are directly connected to mitigation actions, reducing context switching and enabling fast response. Consistent layouts, scan-friendly visuals, and transparent logs build trust and support both non-technical users and security experts."
+            },
+            {
+              "topText": "Result: a clear, intuitive experience that turns security insights into confident action."
+            }
+          ],
+          "titleTextSectionRight": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "",
+          "titleTextSectionLeft": "Solution",
+          "textSectionLeft": [
+            {
+              "topText": "To address the challenges of monitoring and mitigating automated attacks at scale, we designed a centralized Command & Control dashboard combined with interactive domain and path lists that turn security data into immediate action."
+            },
+            {
+              "topText": "Unified Security Dashboard",
+              "bottomText": "The dashboard provides a real-time, high-level view of automated traffic and attack activity across all connected sites. Visual indicators and color-coded metrics clearly distinguish high-risk traffic, mitigated threats, and managed services, allowing users to quickly assess overall system health. This layout enables fast decision-making without requiring deep security expertise."
+            },
+            {
+              "topText": "Interactive Domain Lists \n Each domain is presented in an interactive list showing:",
+              "bulletPoints": [
+                "Number of detected attacks",
+                "Visual traffic intensity per domain",
+                "Selection controls for bulk actions"
+              ]
+            },
+            {
+              "topText": "Users can instantly compare domains, identify the most targeted sites, and apply mitigation strategies directly from the list. This removes the need to navigate through multiple screens and significantly reduces response time."
+            },
+            {
+              "topText": "Path-Level Insights",
+              "bottomText": "The domain view drills down into path-specific attack data (e.g. admin panels, APIs). By surfacing the most abused paths, the interface helps users understand where and how attacks occur, enabling precise, targeted protection instead of broad blocking rules."
+            },
+            {
+              "topText": "Immediate Mitigation Actions",
+              "bottomText": "Rule creation and mitigation options (such as Captcha or allowlisting) are embedded directly into the workflow. Users can move seamlessly from insight to action, creating and applying rules in seconds."
+            },
+            {
+              "topText": "Transparency Through Playback Logs",
+              "bottomText": "A detailed playback log provides full visibility into detected events, including timestamps, user agents, IPs, and reasons for flagging. This ensures auditability, trust, and confidence in the system’s automated decisions."
+            },
+            {
+              "topText": "Result:",
+              "bottomText": "The combination of a clear dashboard and interactive domain lists transforms complex security monitoring into an intuitive, efficient experience—empowering users to detect threats faster, respond smarter, and maintain control across multiple websites."
+            }
+          ],
+          "titleTextSectionRight": ""
+        },
+        {
+          "topImage": "/images/projects/verified-visitors-portal/gallery/gallery_3.png",
+          "bottomImage": "/images/projects/verified-visitors-portal/gallery/gallery_4.png"
+        },
+        {
+          "titleTextSectionLeft": "Additional screens",
+          "textSectionLeft": [
+            {
+              "topText": "Together, these screens extend the dashboard into a cohesive security ecosystem, supporting monitoring, investigation, rule management, and collaboration—without breaking user flow or increasing complexity.",
+              "bottomText": "The full portal experience can be explored by logging in at www.verifiedvisitors.com"
+            }
+          ]
+        }
+      ],
+      "gallery": {
+        "images": [
+          "/images/projects/verified-visitors-portal/gallery/gallery_slide_1.png",
+          "/images/projects/verified-visitors-portal/gallery/gallery_slide_2.png",
+          "/images/projects/verified-visitors-portal/gallery/gallery_slide_3.png",
+          "/images/projects/verified-visitors-portal/gallery/gallery_slide_4.png"
+        ]
+      }
+    },
+    {
+      "id": "xeesty",
+      "title": "Xeesty",
+      "subtitle": "Health & Wellness Mobile App",
+      "detailedPageInfo": {
+        "darkText": "Health & Wellness",
+        "lightText": "Mobile App"
+      },
+      "thumbnail": "/images/projects/xeesty/square_xeesty.jpeg",
+      "top": true,
+      "industry": "Healthcare",
+      "client": "GloveVentures Ltd.",
+      "heroImage": "/images/projects/xeesty/hero.png",
+      "heroMockups": [],
+      "description": "Xeesty focuses on designing a personalized health and wellness mobile application that helps users better understand, track, and improve their overall well-being. The app addresses common challenges with health tracking apps to create intuitive and user-friendly experiences. The goal was to create a product that feels supportive, motivating, and non-overwhelming, especially for users managing long-term health goals.",
+      "figmaUrl": "",
+      "categories": [
+        "UX/UI Projects",
+        "Logo",
+        "Icons"
+      ],
+      "infoSections": [
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "",
+          "titleTextSectionLeft": "The Problem",
+          "textSectionLeft": [
+            {
+              "topText": "Many health apps overwhelm users with:",
+              "bulletPoints": [
+                "Complex medical language",
+                "Lack of personalization"
+              ],
+              "bottomText": ""
+            },
+            {
+              "topText": "Users needed a simple, friendly, and structured way to:",
+              "bulletPoints": [
+                "Track health metrics (diet, BMI, habits)",
+                "Improve health experiences without friction",
+                "Follow wellness challenges and activities",
+                "See progress at a glance"
+              ],
+              "bottomText": ""
+            }
+          ],
+          "titleTextSectionRight": "Solution",
+          "textSectionRight": [
+            {
+              "topText": "A user-centered health app that:",
+              "bulletPoints": [
+                "Organizes health information into clear sections",
+                "Personalizes content based on user interests",
+                "Encourages consistency through challenges and daily activities",
+                "Visualizes progress using friendly charts and indicators"
+              ],
+              "bottomText": "The interface balances data clarity with a warm, motivating visual language."
+            }
+          ],
+          "bottomImage": ""
+        }
+      ],
+      "gallery": {
+        "images": [
+          "/images/projects/xeesty/gallery/gallery_01.png"
+        ]
+      }
+    },
+    {
+      "id": "marginswap",
+      "title": "Marginswap",
+      "subtitle": "Trading and asset management platform",
+      "detailedPageInfo": {
+        "darkText": "Trading and asset",
+        "lightText": "management platform"
+      },
+      "thumbnail": "/images/projects/marginswap/square_ms.jpeg",
+      "top": true,
+      "industry": "Fintech / DeFi",
+      "client": "MarginSwap LLC",
+      "heroImage": "",
+      "heroMockups": [],
+      "description": "A decentralized finance platform for crypto swapping, margin trading, and asset management. The product enables users to manage balances, borrow and repay assets, and monitor key risk metrics through a clear, data-driven dashboard.",
+      "figmaUrl": "",
+      "categories": [
+        "UX/UI Projects",
+        "Logo",
+        "Icons"
+      ],
+      "infoSections": [
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/marginswap/gallery/gallery_1.png"
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/marginswap/gallery/gallery_2.png"
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/marginswap/gallery/gallery_3.png"
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/marginswap/gallery/gallery_4.png"
+        }
+      ],
+      "gallery": {}
+    },
+    {
+      "id": "zf-locations-app",
+      "title": "ZF Locations App",
+      "subtitle": "Global Locations Management App",
+      "detailedPageInfo": {
+        "darkText": "Global Locations",
+        "lightText": "Management App"
+      },
+      "thumbnail": "/images/projects/zf-locations-app/square_zf.jpeg",
+      "top": true,
+      "industry": "Industrial Technology",
+      "client": "ZF Passau GmbH",
+      "heroImage": "",
+      "heroMockups": [],
+      "description": "ZF is a German technology manufacturing company that supplies systems for passenger cars, commercial vehicles and industrial technology. The application was redesigned to enhance information hierarchy, reduce cognitive load, and improve overall usability.",
+      "figmaUrl": "",
+      "categories": [
+        "UX/UI Projects",
+        "Logo",
+        "Icons"
+      ],
+      "infoSections": [
+        {
+          "topImage": "/images/projects/zf-locations-app/gallery/gallery_1.png",
+          "bottomImage": "/images/projects/zf-locations-app/gallery/gallery_2.png"
+        },
+        {
+          "topImage": "/images/projects/zf-locations-app/gallery/gallery_3.png"
+        }
+      ],
+      "gallery": {}
+    },
+    {
+      "id": "ket",
+      "title": "Ket",
+      "subtitle": "Task-Based Service Marketplace",
+      "detailedPageInfo": {
+        "darkText": "Task-Based Service",
+        "lightText": "Marketplace"
+      },
+      "thumbnail": "/images/projects/ket/square_ket.jpeg",
+      "top": false,
+      "industry": "Marketplace",
+      "client": "Ket Services Inc.",
+      "heroImage": "",
+      "heroMockups": [],
+      "description": "A task-based service marketplace connecting customers with local service providers for home repairs, cleaning, moving, and more. The platform streamlines the process of finding, booking, and managing service appointments.",
+      "figmaUrl": "",
+      "categories": [
+        "UX/UI Projects",
+        "Web"
+      ],
+      "infoSections": [
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/ket/gallery/gallery_1.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/ket/gallery/gallery_2.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        }
+      ],
+      "gallery": {
+        "images": []
+      }
+    },
+    {
+      "id": "custom_compiler",
+      "title": "Custom Compiler by Synopsys Inc.",
+      "subtitle": "Task-Based Service Marketplace",
+      "detailedPageInfo": {
+        "darkText": "Custom Compiler",
+        "lightText": "by Synopsys Inc."
+      },
+      "thumbnail": "/images/projects/custom-compiler/square_cc.jpeg",
+      "top": false,
+      "industry": "Electronic Design Automation",
+      "client": "Synopsys Inc.",
+      "heroImage": "",
+      "heroMockups": [],
+      "description": "Synopsys Custom Compiler is a professional EDA tool for full-custom analog and mixed-signal IC design.I designed a high-density, function-driven icon system optimized for expert workflows—using precise geometry, consistent stroke weights, and semantic color coding to support fast recognition, complex layer management, and long sessions in a dark technical environment.",
+      "figmaUrl": "",
+      "categories": [
+        "UX/UI Projects",
+        "Web"
+      ],
+      "infoSections": [
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_1.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_2.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_3.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_4.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_5.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        },
+        {
+          "title": "",
+          "splitView": false,
+          "topImage": "/images/projects/custom-compiler/gallery/gallery_6.png",
+          "titleTextSectionLeft": "",
+          "textSectionLeft": [],
+          "titleTextSectionRight": "",
+          "textSectionRight": [],
+          "bottomImage": ""
+        }
+      ],
+      "gallery": {
+        "images": []
+      }
+    }
+  ]
+}

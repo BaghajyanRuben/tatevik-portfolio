@@ -1,16 +1,35 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { PageTransition } from '../components/layout';
 import { ProjectGrid } from '../components/home';
 import { ProjectCategoriesSection } from '../components/sections/project';
 import SEO from '../components/SEO';
-import projectsData from '../data/projects.json';
+import { getAllProjects } from '../services/projectService';
 import { staggerContainer, staggerItem } from '../hooks/useScrollAnimation';
 
 const UIUXProjects = () => {
-  // Filter projects that have "UX/UI Projects" in their categories
-  const uiuxProjects = projectsData.projects.filter((project) =>
-    project.categories?.includes('UX/UI Projects')
-  );
+  const [uiuxProjects, setUiuxProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const projects = await getAllProjects();
+        // Filter projects that have "UX/UI Projects" in their categories and are published
+        const filtered = projects.filter((project) =>
+          project.categories?.includes('UX/UI Projects') && 
+          (project.status === 'published' || !project.status)
+        );
+        setUiuxProjects(filtered);
+      } catch (error) {
+        console.error('Error loading projects:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   // Structured data for the UI/UX projects page
   const structuredData = {
@@ -65,7 +84,19 @@ const UIUXProjects = () => {
 
           {/* Projects Grid */}
           <section className="mt-12 md:mt-16">
-            <ProjectGrid projects={uiuxProjects} />
+            {loading ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="animate-pulse">
+                    <div className="aspect-square bg-gray-200 rounded-lg mb-4"></div>
+                    <div className="h-6 bg-gray-200 rounded mb-2"></div>
+                    <div className="h-4 bg-gray-200 rounded w-2/3"></div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <ProjectGrid projects={uiuxProjects} />
+            )}
           </section>
         </div>
 

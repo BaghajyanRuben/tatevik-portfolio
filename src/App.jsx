@@ -17,6 +17,10 @@ import AdminLogin from './pages/admin/AdminLogin';
 import AdminDashboard from './pages/admin/AdminDashboard';
 import ManageFeedback from './pages/admin/ManageFeedback';
 import AddFeedback from './pages/admin/AddFeedback';
+import ManageProjects from './pages/admin/ManageProjects';
+import AddProject from './pages/admin/AddProject';
+import EditProject from './pages/admin/EditProject';
+import ReorderProjects from './pages/admin/ReorderProjects';
 import NotFound from './pages/NotFound';
 
 const AnimatedRoutes = () => {
@@ -63,6 +67,38 @@ const AnimatedRoutes = () => {
           element={
             <ProtectedRoute>
               <AddFeedback />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/admin/projects" 
+          element={
+            <ProtectedRoute>
+              <ManageProjects />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/admin/projects/add" 
+          element={
+            <ProtectedRoute>
+              <AddProject />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/admin/projects/edit/:id" 
+          element={
+            <ProtectedRoute>
+              <EditProject />
+            </ProtectedRoute>
+          } 
+        />
+        <Route 
+          path="/admin/projects/reorder" 
+          element={
+            <ProtectedRoute>
+              <ReorderProjects />
             </ProtectedRoute>
           } 
         />

@@ -19,6 +19,7 @@ const app = initializeApp(firebaseConfig);
 // Initialize services
 export const auth = getAuth(app);
 export const db = getFirestore(app);
+// Firebase Storage removed - using local file management instead
 
 // Initialize analytics only in production
 let analytics = null;
