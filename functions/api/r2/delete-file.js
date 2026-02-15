@@ -1,40 +1,24 @@
 /**
  * Cloudflare Pages Function: Delete File from R2
  * 
- * This function deletes files or folders from the R2 bucket.
- * It runs as a serverless function in production.
+ * Uses native R2 bucket binding (no AWS SDK needed).
+ * Requires R2 binding named "R2_BUCKET" in Cloudflare Pages settings.
  */
-
-import { S3Client, DeleteObjectCommand, ListObjectsV2Command } from '@aws-sdk/client-s3';
 
 export async function onRequestPost(context) {
   const { request, env } = context;
 
   try {
-    // Get R2 credentials from environment
-    const accountId = env.VITE_R2_ACCOUNT_ID;
-    const accessKeyId = env.VITE_R2_ACCESS_KEY_ID;
-    const secretAccessKey = env.VITE_R2_SECRET_ACCESS_KEY;
-    const bucketName = env.VITE_R2_BUCKET_NAME;
+    const bucket = env.R2_BUCKET;
 
-    if (!accountId || !accessKeyId || !secretAccessKey || !bucketName) {
+    if (!bucket) {
       return new Response(JSON.stringify({ 
-        error: 'R2 credentials not configured' 
+        error: 'R2 bucket binding not configured. Add R2_BUCKET binding in Cloudflare Pages settings.' 
       }), {
         status: 503,
         headers: { 'Content-Type': 'application/json' }
       });
     }
-
-    // Initialize R2 client
-    const r2Client = new S3Client({
-      region: 'auto',
-      endpoint: `https://${accountId}.r2.cloudflarestorage.com`,
-      credentials: {
-        accessKeyId,
-        secretAccessKey,
-      },
-    });
 
     // Parse request body
     const body = await request.json();
@@ -53,15 +37,10 @@ export async function onRequestPost(context) {
 
     // Check if it's a folder
     if (itemPath.endsWith('/')) {
-      // List all objects with this prefix
-      const listCommand = new ListObjectsV2Command({
-        Bucket: bucketName,
-        Prefix: cleanKey,
-      });
+      // List all objects with this prefix to check if empty
+      const listed = await bucket.list({ prefix: cleanKey });
 
-      const listResponse = await r2Client.send(listCommand);
-
-      if (listResponse.Contents && listResponse.Contents.length > 1) {
+      if (listed.objects && listed.objects.length > 1) {
         return new Response(JSON.stringify({ 
           error: 'Cannot delete non-empty folder. Please delete contents first.' 
         }), {
@@ -71,18 +50,10 @@ export async function onRequestPost(context) {
       }
 
       // Delete folder marker
-      const deleteCommand = new DeleteObjectCommand({
-        Bucket: bucketName,
-        Key: `${cleanKey}.folder`,
-      });
-      await r2Client.send(deleteCommand);
+      await bucket.delete(`${cleanKey}.folder`);
     } else {
       // Delete single file
-      const command = new DeleteObjectCommand({
-        Bucket: bucketName,
-        Key: cleanKey,
-      });
-      await r2Client.send(command);
+      await bucket.delete(cleanKey);
     }
 
     return new Response(JSON.stringify({ 

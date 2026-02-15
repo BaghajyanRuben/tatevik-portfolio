@@ -1,41 +1,25 @@
 /**
  * Cloudflare Pages Function: Upload File to R2
  * 
- * This function uploads files to the R2 bucket.
- * It runs as a serverless function in production.
+ * Uses native R2 bucket binding (no AWS SDK needed).
+ * Requires R2 binding named "R2_BUCKET" in Cloudflare Pages settings.
  */
-
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
 
 export async function onRequestPost(context) {
   const { request, env } = context;
 
   try {
-    // Get R2 credentials from environment
-    const accountId = env.VITE_R2_ACCOUNT_ID;
-    const accessKeyId = env.VITE_R2_ACCESS_KEY_ID;
-    const secretAccessKey = env.VITE_R2_SECRET_ACCESS_KEY;
-    const bucketName = env.VITE_R2_BUCKET_NAME;
+    const bucket = env.R2_BUCKET;
     const publicUrl = env.VITE_R2_PUBLIC_URL;
 
-    if (!accountId || !accessKeyId || !secretAccessKey || !bucketName) {
+    if (!bucket) {
       return new Response(JSON.stringify({ 
-        error: 'R2 credentials not configured' 
+        error: 'R2 bucket binding not configured. Add R2_BUCKET binding in Cloudflare Pages settings.' 
       }), {
         status: 503,
         headers: { 'Content-Type': 'application/json' }
       });
     }
-
-    // Initialize R2 client
-    const r2Client = new S3Client({
-      region: 'auto',
-      endpoint: `https://${accountId}.r2.cloudflarestorage.com`,
-      credentials: {
-        accessKeyId,
-        secretAccessKey,
-      },
-    });
 
     // Parse multipart form data
     const formData = await request.formData();
@@ -52,25 +36,18 @@ export async function onRequestPost(context) {
     }
 
     // Sanitize filename
-    let filename = file.name.replace(/[^a-zA-Z0-9.-_]/g, '_');
+    const filename = file.name.replace(/[^a-zA-Z0-9.-_]/g, '_');
 
     // Prepare path
     const cleanPath = targetPath.startsWith('/') ? targetPath.slice(1) : targetPath;
     const fullKey = `${cleanPath}/${filename}`;
 
-    // Get file buffer
-    const arrayBuffer = await file.arrayBuffer();
-    const buffer = new Uint8Array(arrayBuffer);
-
-    // Upload to R2
-    const command = new PutObjectCommand({
-      Bucket: bucketName,
-      Key: fullKey,
-      Body: buffer,
-      ContentType: file.type || 'application/octet-stream',
+    // Upload to R2 using native binding
+    await bucket.put(fullKey, file.stream(), {
+      httpMetadata: {
+        contentType: file.type || 'application/octet-stream',
+      },
     });
-
-    await r2Client.send(command);
 
     const filePublicUrl = `${publicUrl}/${fullKey}`;
 
