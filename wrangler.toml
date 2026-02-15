@@ -1,5 +1,6 @@
 # Cloudflare Pages configuration
 name = "tatevik-portfolio"
+pages_build_output_dir = "./dist"
 compatibility_date = "2024-12-01"
 
 # R2 bucket binding for Pages Functions
