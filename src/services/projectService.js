@@ -8,7 +8,6 @@ import {
   deleteDoc,
   query,
   where,
-  orderBy,
   serverTimestamp
 } from 'firebase/firestore';
 import { db } from '../config/firebase';
@@ -16,52 +15,22 @@ import projectsData from '../data/projects.json';
 
 const COLLECTION_NAME = 'projects';
 
+// Helper: Sort projects by 'order' field (ascending), projects without order go last
+const sortByOrder = (projects) => {
+  return [...projects].sort((a, b) => {
+    const orderA = a.order != null ? a.order : Infinity;
+    const orderB = b.order != null ? b.order : Infinity;
+    return orderA - orderB;
+  });
+};
+
 // Get all projects (with fallback to JSON)
 export const getAllProjects = async () => {
   try {
-    // Get ALL documents without ordering first
-    const allDocsQuery = query(collection(db, COLLECTION_NAME));
-    const allDocsSnapshot = await getDocs(allDocsQuery);
-    
-    console.log('📊 Total projects in Firestore:', allDocsSnapshot.size);
-    
-    // Now try ordering by 'order' field (for custom ordering)
-    let querySnapshot;
-    try {
-      const q = query(
-        collection(db, COLLECTION_NAME),
-        orderBy('order', 'asc')
-      );
-      querySnapshot = await getDocs(q);
-      console.log('✅ Using order field, returned:', querySnapshot.size, 'projects');
-      
-      // If fewer results than total, some projects are missing 'order' field
-      if (querySnapshot.size < allDocsSnapshot.size) {
-        console.warn('⚠️ Some projects missing order field!', 
-          'Total:', allDocsSnapshot.size, 
-          'With order:', querySnapshot.size
-        );
-        // Use all docs instead
-        querySnapshot = allDocsSnapshot;
-      }
-    } catch (orderError) {
-      // If 'order' field doesn't exist or no index, fall back to createdAt
-      console.log('⚠️ No order field or index, using createdAt ordering');
-      try {
-        const q = query(
-          collection(db, COLLECTION_NAME),
-          orderBy('createdAt', 'desc')
-        );
-        querySnapshot = await getDocs(q);
-        console.log('✅ Using createdAt ordering, returned:', querySnapshot.size, 'projects');
-      } catch (createdAtError) {
-        console.warn('⚠️ createdAt ordering failed too, using unordered');
-        querySnapshot = allDocsSnapshot;
-      }
-    }
+    const q = query(collection(db, COLLECTION_NAME));
+    const querySnapshot = await getDocs(q);
     
     if (querySnapshot.empty) {
-      // Fallback to JSON if no projects in Firebase
       console.log('⚠️ No projects in Firebase, using JSON fallback');
       return projectsData.projects;
     }
@@ -73,10 +42,9 @@ export const getAllProjects = async () => {
     
     console.log('✅ Fetched projects from Firebase:', projects.length, 'projects');
     
-    return projects;
+    return sortByOrder(projects);
   } catch (error) {
     console.error('Error fetching projects from Firebase, using JSON fallback:', error);
-    // Fallback to JSON on error
     return projectsData.projects;
   }
 };
@@ -106,19 +74,17 @@ export const getProjectById = async (id) => {
   }
 };
 
-// Get published projects only
+// Get published projects only (safe for unauthenticated users)
 export const getPublishedProjects = async () => {
   try {
     const q = query(
       collection(db, COLLECTION_NAME),
-      where('status', '==', 'published'),
-      orderBy('createdAt', 'desc')
+      where('status', '==', 'published')
     );
     const querySnapshot = await getDocs(q);
     
     if (querySnapshot.empty) {
-      // Fallback to JSON
-      console.log('No published projects in Firebase, using JSON fallback');
+      console.log('⚠️ No published projects in Firebase, using JSON fallback');
       return projectsData.projects;
     }
     
@@ -126,7 +92,9 @@ export const getPublishedProjects = async () => {
     querySnapshot.forEach((doc) => {
       projects.push({ id: doc.id, ...doc.data() });
     });
-    return projects;
+    
+    console.log('✅ Fetched published projects from Firebase:', projects.length);
+    return sortByOrder(projects);
   } catch (error) {
     console.error('Error fetching published projects, using JSON fallback:', error);
     return projectsData.projects;

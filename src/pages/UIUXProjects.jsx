@@ -4,7 +4,7 @@ import { PageTransition } from '../components/layout';
 import { ProjectGrid } from '../components/home';
 import { ProjectCategoriesSection } from '../components/sections/project';
 import SEO from '../components/SEO';
-import { getAllProjects } from '../services/projectService';
+import { getPublishedProjects } from '../services/projectService';
 import { staggerContainer, staggerItem } from '../hooks/useScrollAnimation';
 
 const UIUXProjects = () => {
@@ -14,11 +14,10 @@ const UIUXProjects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const projects = await getAllProjects();
-        // Filter projects that have "UX/UI Projects" in their categories and are published
+        const projects = await getPublishedProjects();
+        // Filter projects that have "UX/UI Projects" in their categories
         const filtered = projects.filter((project) =>
-          project.categories?.includes('UX/UI Projects') && 
-          (project.status === 'published' || !project.status)
+          project.categories?.includes('UX/UI Projects')
         );
         setUiuxProjects(filtered);
       } catch (error) {

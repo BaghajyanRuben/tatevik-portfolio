@@ -3,7 +3,7 @@ import { PageTransition } from '../components/layout';
 import { HomeHero, TopProjects } from '../components/sections/home';
 import ClientsSection from '../components/sections/home/ClientsSection';
 import SEO from '../components/SEO';
-import { getAllProjects } from '../services/projectService';
+import { getPublishedProjects } from '../services/projectService';
 import aboutData from '../data/about.json';
 
 const Home = () => {
@@ -13,12 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const allProjects = await getAllProjects();
-        console.log('🏠 Home: All projects:', allProjects.length);
-        // Filter only published projects
-        const publishedProjects = allProjects.filter(
-          (project) => project.status === 'published' || !project.status
-        );
+        const publishedProjects = await getPublishedProjects();
         console.log('🏠 Home: Published projects:', publishedProjects.length);
         setProjects(publishedProjects);
       } catch (error) {
