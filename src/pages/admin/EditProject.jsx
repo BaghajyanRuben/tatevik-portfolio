@@ -11,7 +11,7 @@ import DynamicArrayInput from '../../components/ui/DynamicArrayInput';
 import { ToastContainer } from '../../components/ui/Toast';
 import { useToast } from '../../hooks/useToast';
 import { useAuth } from '../../contexts/AuthContext';
-import { getProjectById, updateProject } from '../../services/projectService';
+import { getProjectByIdAdmin, updateProject } from '../../services/projectService';
 import SEO from '../../components/SEO';
 
 const STEPS = [
@@ -69,7 +69,7 @@ const EditProject = () => {
   useEffect(() => {
     const loadProject = async () => {
       try {
-        const project = await getProjectById(id);
+        const project = await getProjectByIdAdmin(id);
         
         if (!project) {
           showError('Project not found');

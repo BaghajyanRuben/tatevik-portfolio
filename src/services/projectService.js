@@ -49,13 +49,14 @@ export const getAllProjects = async () => {
   }
 };
 
-// Get single project by ID (with fallback to JSON)
+// Get single project by ID — public (with fallback to JSON)
 export const getProjectById = async (id) => {
   try {
-    // Try to find in Firebase first
+    // Query with status filter so unauthenticated users satisfy Firestore rules
     const q = query(
       collection(db, COLLECTION_NAME),
-      where('id', '==', id)
+      where('id', '==', id),
+      where('status', '==', 'published')
     );
     const querySnapshot = await getDocs(q);
     
@@ -69,7 +70,28 @@ export const getProjectById = async (id) => {
     return projectsData.projects.find(p => p.id === id);
   } catch (error) {
     console.error('Error fetching project from Firebase, using JSON fallback:', error);
-    // Fallback to JSON on error
+    return projectsData.projects.find(p => p.id === id);
+  }
+};
+
+// Get single project by ID — admin (no status filter, requires auth)
+export const getProjectByIdAdmin = async (id) => {
+  try {
+    const q = query(
+      collection(db, COLLECTION_NAME),
+      where('id', '==', id)
+    );
+    const querySnapshot = await getDocs(q);
+    
+    if (!querySnapshot.empty) {
+      const docData = querySnapshot.docs[0];
+      return { id: docData.id, ...docData.data() };
+    }
+    
+    console.log('Project not found in Firebase, using JSON fallback');
+    return projectsData.projects.find(p => p.id === id);
+  } catch (error) {
+    console.error('Error fetching project from Firebase, using JSON fallback:', error);
     return projectsData.projects.find(p => p.id === id);
   }
 };

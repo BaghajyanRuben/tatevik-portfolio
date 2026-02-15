@@ -114,7 +114,7 @@ const ProjectHero = ({ title, subtitle, detailedPageInfo, description, industry,
               width={1200}
               height={675}
               loading="eager"
-              fetchPriority="high"
+              fetchpriority="high"
               className="w-full h-auto object-cover"
             />
           </motion.div>
