@@ -3,6 +3,19 @@ name = "tatevik-portfolio"
 pages_build_output_dir = "./dist"
 compatibility_date = "2024-12-01"
 
+# Build-time environment variables (VITE_ prefix required for client-side access)
+[vars]
+VITE_FIREBASE_API_KEY = "AIzaSyBOhwFNty4yVQdcJvusIF2b2NgNu88TOCI"
+VITE_FIREBASE_AUTH_DOMAIN = "tatevik-portfolio.firebaseapp.com"
+VITE_FIREBASE_PROJECT_ID = "tatevik-portfolio"
+VITE_FIREBASE_STORAGE_BUCKET = "tatevik-portfolio.firebasestorage.app"
+VITE_FIREBASE_MESSAGING_SENDER_ID = "575884338332"
+VITE_FIREBASE_APP_ID = "1:575884338332:web:e8c65d23bf8ba3ee617959"
+VITE_FIREBASE_MEASUREMENT_ID = "G-M9XNW77XEP"
+VITE_R2_ACCOUNT_ID = "45a041e24553a302e2ec31520fb2ab6d"
+VITE_R2_BUCKET_NAME = "portfolio-images"
+VITE_R2_PUBLIC_URL = "https://pub-dca6a092df5e4de793a46e9c2a487a9a.r2.dev"
+
 # R2 bucket binding for Pages Functions
 [[r2_buckets]]
 binding = "R2_BUCKET"
