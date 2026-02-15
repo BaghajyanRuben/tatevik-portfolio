@@ -24,28 +24,34 @@ const AdminDashboard = () => {
 
   useEffect(() => {
     const fetchStats = async () => {
-      try {
-        // Fetch feedback stats
-        const feedbacks = await getAllFeedbacks();
-        setFeedbackStats({
-          total: feedbacks.length,
-          approved: feedbacks.filter(f => f.status === 'approved').length,
-          pending: feedbacks.filter(f => f.status === 'pending').length
+      // Fetch feedback and project stats independently so one failure doesn't block the other
+      const feedbackPromise = getAllFeedbacks()
+        .then(feedbacks => {
+          setFeedbackStats({
+            total: feedbacks.length,
+            approved: feedbacks.filter(f => f.status === 'approved').length,
+            pending: feedbacks.filter(f => f.status === 'pending').length
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching feedback stats:', error);
         });
 
-        // Fetch project stats
-        const projects = await getAllProjects();
-        setProjectStats({
-          total: projects.length,
-          published: projects.filter(p => p.status === 'published').length,
-          draft: projects.filter(p => p.status === 'draft').length,
-          featured: projects.filter(p => p.top).length
+      const projectPromise = getAllProjects()
+        .then(projects => {
+          setProjectStats({
+            total: projects.length,
+            published: projects.filter(p => p.status === 'published').length,
+            draft: projects.filter(p => p.status === 'draft').length,
+            featured: projects.filter(p => p.top).length
+          });
+        })
+        .catch(error => {
+          console.error('Error fetching project stats:', error);
         });
-      } catch (error) {
-        console.error('Error fetching stats:', error);
-      } finally {
-        setLoading(false);
-      }
+
+      await Promise.all([feedbackPromise, projectPromise]);
+      setLoading(false);
     };
 
     fetchStats();

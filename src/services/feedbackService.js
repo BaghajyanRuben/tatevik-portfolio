@@ -67,7 +67,20 @@ export const getAllFeedbacks = async () => {
     return feedbacks;
   } catch (error) {
     console.error('Error fetching all feedbacks:', error);
-    throw new Error('Failed to load feedbacks.');
+    // Try without ordering as fallback (in case of missing index)
+    try {
+      const fallbackQuery = query(collection(db, COLLECTION_NAME));
+      const fallbackSnapshot = await getDocs(fallbackQuery);
+      const feedbacks = [];
+      fallbackSnapshot.forEach((doc) => {
+        feedbacks.push({ id: doc.id, ...doc.data() });
+      });
+      console.log('✅ Fetched feedbacks without ordering:', feedbacks.length);
+      return feedbacks;
+    } catch (fallbackError) {
+      console.error('Error fetching feedbacks (fallback):', fallbackError);
+      return [];
+    }
   }
 };
 

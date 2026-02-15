@@ -8,13 +8,10 @@ service cloud.firestore {
     }
     
     // Helper function to check if user is admin
-    // Add your admin email(s) here
+    // Since this is a personal portfolio with no self-registration,
+    // any authenticated user is considered an admin
     function isAdmin() {
-      return isAuthenticated() && 
-             request.auth.token.email in [
-               // Add your admin email(s) here
-               // Example: 'admin@example.com',
-             ];
+      return isAuthenticated();
     }
     
     // Feedbacks collection
